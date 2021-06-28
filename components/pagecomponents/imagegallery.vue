@@ -55,7 +55,6 @@ export default {
     },
 
     components: {
-        'no-ssr': NoSSR,
         imagegallerymodal
     }
 }
