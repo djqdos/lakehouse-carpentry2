@@ -1,6 +1,7 @@
 <template>
+    <no-ssr>
         <div class="contactus page-max">
-            <div class="formSection">
+            <div class="formSection">                                
                 <div class="formContainer" ref="formContainer">
                 <ValidationObserver ref="form">
                     <form name="contact" netlify @submit.prevent="validateSubmit" ref="theform">                
@@ -43,7 +44,7 @@
                         </fieldset>                
                     </form>
                 </ValidationObserver>
-                </div>
+                </div>                
                 <div class="thankyou" ref="thankyou" v-html="$md.render(block.thankyoutext)">
                 </div>
             </div>
@@ -55,7 +56,8 @@
                     </p>
                 </div>
             </div>
-        </div>    
+        </div>   
+    </no-ssr>
 </template>
 
 <script>
