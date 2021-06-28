@@ -5,7 +5,7 @@
     </div> -->
 
     <div class="page-max">
-        <no-ssr>
+        <client-only>
             <div v-masonry 
                  transition-duration="3s" 
                  item-selector=".item"
@@ -23,13 +23,12 @@
                 </div>
 
             </div>
-        </no-ssr>
+        </client-only>
     </div>
 
 </template>
 
 <script>
-import NoSSR from 'vue-no-ssr'
 import imagegallerymodal from '~/components/pagecomponents/imagegallery_modal.vue'
 
 export default {

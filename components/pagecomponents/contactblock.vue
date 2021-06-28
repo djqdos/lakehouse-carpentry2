@@ -1,10 +1,18 @@
 <template>
-    <no-ssr>
+    <client-only>
         <div class="contactus page-max">
             <div class="formSection">                                
                 <div class="formContainer" ref="formContainer">
                 <ValidationObserver ref="form">
-                    <form name="contact" netlify @submit.prevent="validateSubmit" ref="theform">                
+                    <form name="contact" 
+                          data-netlify="true" 
+                          method="post"
+                          data-netlify-honeypot="bot-field"
+                          @submit.prevent="validateSubmit" 
+                          ref="theform"
+                          
+                          >                
+                        <input type="hidden" name="form-name" value="contact" />
                         <fieldset class="name">                    
                             <ValidationProvider name="name" rules="required" v-slot="{ errors }"  class="provider-container">
                                 <input type="text" v-model="name" id="name" name="name" placeholder="Name" />
@@ -57,7 +65,7 @@
                 </div>
             </div>
         </div>   
-    </no-ssr>
+    </client-only>
 </template>
 
 <script>
