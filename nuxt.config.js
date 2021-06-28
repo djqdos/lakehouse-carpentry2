@@ -136,7 +136,7 @@ export default {
     }    
   },
   sitemap: {
-    hostname: process.env.base_url,
+    hostname: "https://boring-bose-bd9f1b.netlify.app/",
     routes() {
       return getRoutes();
     }
