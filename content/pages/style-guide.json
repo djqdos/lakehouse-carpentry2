@@ -28,56 +28,6 @@
       ]
     },
     {
-      "type": "imagegallery",
-      "imagegallery": [
-        {
-          "image": "/img/20180803_173040.jpg",
-          "title": "Image 1",
-          "text": "asd"
-        },
-        {
-          "image": "/img/20180803_173036.jpg",
-          "title": "Image 2",
-          "text": "asd"
-        },
-        {
-          "image": "/img/20180803_173028.jpg",
-          "title": "Image 3",
-          "text": "sdfs"
-        },
-        {
-          "image": "/img/20180803_173016.jpg",
-          "title": "Image 4",
-          "text": "asd"
-        },
-        {
-          "title": "dfgd",
-          "image": "/img/2.png",
-          "text": "dfgfdgdfg"
-        },
-        {
-          "title": "dddd",
-          "image": "/img/20180803_173036.jpg",
-          "text": "cvbbcbcbcbcvb"
-        },
-        {
-          "title": "bbbbbb",
-          "image": "/img/nev2.png",
-          "text": "cxbxbxcbcxbcx"
-        },
-        {
-          "title": "gfhgfhfhf",
-          "image": "/img/20180803_173040.jpg",
-          "text": "fhfhfghf"
-        },
-        {
-          "title": "mmmmmm",
-          "image": "/img/20180803_173040.jpg",
-          "text": "tutyurut"
-        }
-      ]
-    },
-    {
       "type": "fixedbackground",
       "title": "ert",
       "subtitle": "dfgdfg",
