@@ -5,30 +5,22 @@
     </div> -->
 
     <div class="page-max">
-        <client-only>
-            <div v-masonry 
-                 transition-duration="3s" 
-                 item-selector=".item"
-                 percent-position="true"
+        
+            <vue-masonry-wall :items="block.imagegallery"
+                              :options="masonryOptions">                                                                    
+                <template v-slot:default="{item}">
+                    <div class="item">
+                        <img :src="item.image" @click="showModal" />
+                    </div>
+                </template>
 
-                 class="masonry-container">
-
-                <div v-masonry-tile
-                     class="item"
-                     v-for="(image, index) in block.imagegallery"
-                     :key="index">
-
-                        <img :src="image.image" :alt="image.title" @click="showModal" />
-
-                </div>
-
-            </div>
-        </client-only>
+            </vue-masonry-wall>
     </div>
 
 </template>
 
 <script>
+import VueMasonryWall from 'vue-masonry-wall'
 import imagegallerymodal from '~/components/pagecomponents/imagegallery_modal.vue'
 
 export default {
@@ -37,6 +29,18 @@ export default {
         block: Object
     },
 
+    data() {
+        return {
+            masonryOptions: {
+                width: 300,
+                padding: {
+                    2: 4,     
+                    3: 4,               
+                    default: 4
+                }
+            }
+        }
+    },
     methods: {
         showModal(e) {
             var data = {
@@ -48,13 +52,8 @@ export default {
       }
     },
 
-    mounted () {
-      if (typeof this.$redrawVueMasonry === 'function') {
-        this.$redrawVueMasonry()
-      }
-    },
-
     components: {
+        VueMasonryWall,
         imagegallerymodal
     }
 }

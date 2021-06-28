@@ -39,8 +39,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src: '@/plugins/vue-carousel.js' , mode: 'client'},
-    { src: '@/plugins/global-components.js'}, 
-    { src: '@/plugins/vue-masonry.js', ssr: false },
+    { src: '@/plugins/global-components.js'},     
     { src: '@/plugins/vue-intersection.js'},
     { src: '@/plugins/vue-modal.js'},
     { src: '@/plugins/vee-validate.js'}
