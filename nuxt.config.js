@@ -2,8 +2,7 @@ import getRoutes from './utils/getRoutes.js';
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
-  //target: 'static',
-  mode: 'universal',
+  target: 'server',
 
   // server: {
   //   host: '192.168.1.3'
