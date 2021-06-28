@@ -61,6 +61,36 @@
         }
       ],
       "thankyoutext": "Thanks for your submission!"
+    },
+    {
+      "type": "imagegallery",
+      "imagegallery": [
+        {
+          "title": "Image 1",
+          "image": "/img/20180803_173028.jpg",
+          "text": "sfsfsfs"
+        },
+        {
+          "title": "asdfas",
+          "image": "/img/20180803_173036.jpg",
+          "text": "asdfsdfa"
+        },
+        {
+          "title": "sdfasfsa",
+          "image": "/img/20180803_173040.jpg",
+          "text": "asdfsaf"
+        },
+        {
+          "title": "dhgfhgfh",
+          "image": "/img/nev2.png",
+          "text": "fhfghfgh"
+        },
+        {
+          "title": "fghfjghhgkhg",
+          "image": "/img/3.png",
+          "text": "sdfgsdgds"
+        }
+      ]
     }
   ],
   "hero": {
