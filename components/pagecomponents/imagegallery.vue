@@ -5,7 +5,7 @@
     </div> -->
 
     <div class="page-max">
-        <client-only>
+        
             <div v-masonry 
                  transition-duration="3s" 
                  item-selector=".item"
@@ -23,7 +23,7 @@
                 </div>
 
             </div>
-        </client-only>
+        
     </div>
 
 </template>
