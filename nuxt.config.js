@@ -5,9 +5,9 @@ export default {
   //target: 'static',
   mode: 'universal',
 
-  server: {
-    host: '192.168.1.3'
-  },
+  // server: {
+  //   host: '192.168.1.3'
+  // },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -28,7 +28,7 @@ export default {
   env: {
     pretitle: "Lakehouse Carpentry | ",
     copyright: 'Lakehouse Carpentry',
-    base_url: "http://192.168.1.3:3000"
+    base_url: "https://boring-bose-bd9f1b.netlify.app/"
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
