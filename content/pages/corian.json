@@ -1,0 +1,30 @@
+{
+  "pagetype": "content-page",
+  "showonsite": true,
+  "title": "Corian",
+  "subtitle": "Custom Corian Work Surfaces",
+  "backgroundimage": "/img/2.png",
+  "hero": {
+    "title": "Corian",
+    "subtitle": "Custom Corian Work Surfaces",
+    "backgroundimage": "/img/2.png"
+  },
+  "metadata": {
+    "opengraph": {
+      "title": "",
+      "description": "",
+      "image": "",
+      "imagealt": ""
+    },
+    "seo": {
+      "title": "",
+      "description": ""
+    },
+    "twitter": {
+      "twittertitle": "",
+      "twitterdescription": "",
+      "twitterimage": "",
+      "twitterimagealt": ""
+    }
+  }
+}

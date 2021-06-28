@@ -1,0 +1,50 @@
+{
+  "title": "Contact",
+  "hero": {
+    "title": "Contact Us",
+    "backgroundimage": "/img/nev2.png"
+  },
+  "sections": [
+    {
+      "type": "bodytext",
+      "bodytext": "# Give us a call!\n\nUt dictum odio ut tempus finibus. Aenean pellentesque faucibus iaculis. Nulla et commodo odio, sed vestibulum dolor. Nam interdum, turpis ac euismod semper, lacus tortor finibus erat, feugiat suscipit mi dolor ut mi. Nulla et mattis mi. Curabitur pretium nunc ac lorem fringilla, non sagittis metus luctus. Mauris mollis erat at mi sodales, et accumsan mi imperdiet. Integer lectus justo, euismod a rhoncus a, tempor ut massa. Curabitur at libero magna. Sed auctor lacus metus, sed euismod sapien consequat at. Mauris in metus euismod, congue ligula ut, varius magna. Vivamus vitae lorem ac orci efficitur feugiat sed et"
+    },
+    {
+      "type": "contactblock",
+      "extrainfo": [
+        {
+          "title": "Extra Info #1",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pulvinar convallis purus, ultrices rutrum mi tristique non"
+        },
+        {
+          "title": "Extra Info #2",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pulvinar convallis purus, ultrices rutrum mi tristique non"
+        },
+        {
+          "title": "Extra Info #3",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pulvinar convallis purus, ultrices rutrum mi tristique non"
+        }
+      ],
+      "thankyoutext": "Thankyou for your submission!"
+    }
+  ],
+  "showonsite": true,
+  "metadata": {
+    "opengraph": {
+      "title": "OpengraphTitle",
+      "description": "OpengraphDescription",
+      "image": "/img/1.png",
+      "imagealt": "ImageAlt"
+    },
+    "seo": {
+      "title": "Lakehouse Carpentry",
+      "description": "Home Page Description"
+    },
+    "twitter": {
+      "twittertitle": "TwitterTitle",
+      "twitterdescription": "TwitterDesc",
+      "twitterimage": "/img/1.png",
+      "twitterimagealt": "ImageAlt"
+    }
+  }
+}

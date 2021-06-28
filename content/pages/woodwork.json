@@ -1,0 +1,30 @@
+{
+  "pagetype": "content-page",
+  "showonsite": true,
+  "title": "Woodwork",
+  "subtitle": "Custom Wood Furniture",
+  "backgroundimage": "/img/1.png",
+  "hero": {
+    "title": "Woodwork",
+    "subtitle": "Custom Wood Furniture",
+    "backgroundimage": "/img/1.png"
+  },
+  "metadata": {
+    "opengraph": {
+      "title": "OpengraphTitle",
+      "description": "OpengraphDescription",
+      "image": "/img/1.png",
+      "imagealt": "ImageAlt"
+    },
+    "seo": {
+      "title": "Lakehouse Carpentry",
+      "description": "Home Page Description"
+    },
+    "twitter": {
+      "twittertitle": "TwitterTitle",
+      "twitterdescription": "TwitterDesc",
+      "twitterimage": "/img/1.png",
+      "twitterimagealt": "ImageAlt"
+    }
+  }  
+}

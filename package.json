@@ -1,0 +1,37 @@
+{
+  "name": "lakehouse",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxt/content": "^1.14.0",
+    "@nuxtjs/axios": "^5.13.1",
+    "@nuxtjs/markdownit": "^2.0.0",
+    "@nuxtjs/sitemap": "^2.4.0",
+    "core-js": "^3.9.1",
+    "netlify-cms-app": "^2.15.20",
+    "nuxt": "^2.15.3",
+    "vee-validate": "^3.4.10",
+    "vue-carousel": "^0.18.0",
+    "vue-js-modal": "^2.0.0-rc.6",
+    "vue-masonry": "^0.13.0",
+    "vue-slider-component": "^4.0.0-beta.4"
+  },
+  "devDependencies": {
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@nuxt/image": "^0.4.17",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "nuxt-animejs": "^1.2.1",
+    "nuxt-fontawesome": "^0.4.0",
+    "prettier": "^2.2.1",
+    "sass": "^1.35.1",
+    "sass-loader": "^10"
+  }
+}

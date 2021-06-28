@@ -1,0 +1,36 @@
+{
+  "instagramapitoken": "INSTA_API",
+  "facebookusername": "FACEBOOK_USERNAME",
+  "instagramusername": "INSTA_USERNAME",
+  "linkedinusername": "LINKEDIN_USERNAME",
+  "phonenumbere": "01234 567890",
+  "emailaddress": "email@email.com",
+  "opengraph": {
+    "ogtitle": "Lakehouse Carpentry",
+    "ogdescription": "Corian and Woodwork",
+    "ogimage": "/img/1.png",
+    "ogimagealt": "ALT IMAGE",
+    "twittertitle": "Lakehouse Carpentry",
+    "twitterdescription": "Corian and Woodwork",
+    "twitterimage": "/img/1.png",
+    "twitterimagealt": "IMAGE ALT"
+  },
+  "metadata": {
+    "seo": {
+      "title": "Lakehouse Carpentry",
+      "description": "Custom Corian and Woodworking"
+    },
+    "opengraph": {
+      "title": "Lakehouse Carpentry",
+      "description": "Custom Corian and Woodworking",
+      "image": "/img/1.png",
+      "imagealt": "Image Alt"
+    },
+    "twitter": {
+      "twittertitle": "Lakehouse Carpentry",
+      "twitterdescription": "Custom Corian and Woodworking",
+      "twitterimage": "/img/1.png",
+      "twitterimagealt": "Image Alt!"
+    }
+  }
+}

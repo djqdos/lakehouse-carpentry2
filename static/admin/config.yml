@@ -1,0 +1,405 @@
+backend:
+  name: proxy
+  proxy_url: http://192.168.1.3:8081/api/v1
+
+# local_backend:
+#     url: http://192.168.1.3:8000/api/v1
+
+media_folder: static/img
+public_folder: /img
+
+collections: 
+  - label: "Settings"
+    name: "settings"
+    files:
+      - label: "Global Settings"
+        name: "global"
+        format: "json"
+        file: "content/global.json"
+        fields:
+          - { label: "Instagram API Key", name: "instagramapitoken", widget: "string", required: false }
+          - { label: "Facebook Username", name: "facebookusername", widget: "string", required: false }
+          - { label: "Instagram Username", name: "instagramusername", widget: "string", required: false }
+          - { label: "LinkedIn Username", name: "linkedinusername", widget: "string", required: false }
+          - { label: "Phone Number", name: "phonenumbere", widget: "string", required: false }
+          - { label: "Email Address", name: "emailaddress", widget: "string", required: false }
+          - { label: "Show On Site", name: "showonsite", widget: "boolean", default: false, required: false }  
+
+          - label: "metadata"
+            name: "metadata"
+            widget: "object"
+            collapsed: true
+            fields: 
+              - label: "SEO"
+                name: "seo"
+                widget: "object"
+                collapsed: true
+                fields:
+                  - { label: "Title", name: "title", widget: "string", required: false }
+                  - { label: "Description", name: "description", widget: "string", required: false } 
+                  - { label: "Image", name: "image", widget: "image", required: false }
+                  - { label: "Image Alt Text", name: "imagealt", widget: "string", required: false }
+                      
+  - label: "Pages"
+    name: "pages"
+    format: "json"
+    create: true
+    slug: "{{slug}}"
+    folder: "content/pages"
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string', required: false }          
+      - label: "Hero"
+        name: "hero"
+        collapsed: true
+        widget: object
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string', required: false }          
+          - { label: "Sub Title", name: "subtitle", widget: "string", required: false }
+          - { label: 'Background Image', name: 'backgroundimage', widget: 'image', required: false }          
+
+      - label: "Sections"
+        name: "sections"
+        widget: "list"
+        types:
+
+        # HERO
+          - label: "Hero"
+            name: "hero"
+            widget: object
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string', required: false }          
+              - { label: "Sub Title", name: "subtitle", widget: "string", required: false }
+              - { label: 'Background Image', name: 'backgroundimage', widget: 'image', required: false }          
+
+          - label: "Fixed Background"
+            name: "fixedbackground"
+            widget: object
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string', required: false }          
+              - { label: "Sub Title", name: "subtitle", widget: "string", required: false }
+              - { label: "Body Text", name: "bodytext", widget: "markdown", required: false }
+              - { label: "Text Colour", name: "textcolor", widget: "color", required: true}
+              - { label: 'Background Image', name: 'backgroundimage', widget: 'image', required: true }          
+
+          # BODY TEXT
+          - label: "Body Text"
+            name: "bodytext"
+            widget: object
+            fields:
+              - { label: "Text Area", name: "bodytext", widget: "markdown" }    
+          
+
+          # SPOTLIGHT
+          - label: "Spotlight"
+            name: "spotlight"
+            widget: object
+            fields:
+              - label: "Spotlight"
+                name: "spotlight"
+                widget: list
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Text", name: "text", widget: "markdown" }
+
+          # PICTURE/TEXT - LEFT
+          - label: "Split Left"
+            name: "splitleft"
+            widget: object
+            fields:
+              - { label: "Text", name: "text", widget: "markdown" }
+              - { label: "Image", name: "image", widget: "image" }
+
+          # PICTURE/TEXT - RIGHT
+          - label: "Split Right"
+            name: "splitright"
+            widget: object
+            fields:
+              - { label: "Text", name: "text", widget: "markdown" }
+              - { label: "Image", name: "image", widget: "image" }
+
+          # IMAGE GALLERY
+          - label: "Image Gallery"
+            name: "imagegallery"
+            widget: object
+            fields:
+              - label: "Image Gallery"
+                name: "imagegallery"
+                widget: list
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Text", name: "text", widget: "markdown" }       
+
+          # CONTACT BLOCK
+          - label: "Contact"
+            name: "contactblock"
+            widget: object
+            fields:
+              - { label: "Thankyou Text", name: "thankyoutext", widget: "markdown" }
+              - label: "Extra Info"
+                name: "extrainfo"
+                widget: list
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Image", name: "image", widget: "image", required: false }
+                  - { label: "Text", name: "text", widget: "markdown" }                                                    
+
+      - label: "Metadata"
+        name: "metadata"
+        widget: "object"
+        collapsed: true
+        fields: 
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Title", name: "title", widget: "string", required: false }
+              - { label: "Description", name: "description", widget: "string", required: false } 
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Image Alt Text", name: "imagealt", widget: "string", required: false }
+
+      - { label: "PageType", name: "pagetype", widget: 'hidden', default: 'content-page' }
+      - { label: "Show On Site", name: "showonsite", widget: "boolean", default: true, required: false }   
+
+  - label: "Static Pages"
+    name: "static"
+    files:
+    - label: "Contact"
+      name: "contact"
+      format: "json"
+      file: "content/contact.json"
+      fields:
+        - { label: 'Title', name: 'title', widget: 'string', required: false }          
+        - label: "Hero"
+          name: "hero"
+          widget: object
+          collapsed: true
+          fields:
+            - { label: 'Title', name: 'title', widget: 'string', required: false }          
+            - { label: "Sub Title", name: "subtitle", widget: "string", required: false }
+            - { label: 'Background Image', name: 'backgroundimage', widget: 'image', required: false }          
+
+        - label: "Sections"
+          name: "sections"
+          widget: "list"
+          types:
+
+            - label: "Hero"
+              name: "hero"
+              widget: object
+              fields:
+                - { label: 'Title', name: 'title', widget: 'string', required: false }          
+                - { label: "Sub Title", name: "subtitle", widget: "string", required: false }
+                - { label: 'Background Image', name: 'backgroundimage', widget: 'image', required: false }          
+
+            - label: "Fixed Background"
+              name: "fixedbackground"
+              widget: object
+              fields:
+                - { label: 'Title', name: 'title', widget: 'string', required: false }          
+                - { label: "Sub Title", name: "subtitle", widget: "string", required: false }
+                - { label: "Text Colour", name: "textcolor", widget: "color", required: true}
+                - { label: 'Background Image', name: 'backgroundimage', widget: 'image', required: true }          
+
+            # BODY TEXT
+            - label: "Body Text"
+              name: "bodytext"
+              widget: object
+              fields:
+                - { label: "Text Area", name: "bodytext", widget: "markdown" }    
+            
+
+            # SPOTLIGHT
+            - label: "Spotlight"
+              name: "spotlight"
+              widget: object
+              fields:
+                - label: "Spotlight"
+                  name: "spotlight"
+                  widget: list
+                  fields:
+                    - { label: "Title", name: "title", widget: "string" }
+                    - { label: "Image", name: "image", widget: "image" }
+                    - { label: "Text", name: "text", widget: "markdown" }
+
+            # PICTURE/TEXT - LEFT
+            - label: "Split Left"
+              name: "splitleft"
+              widget: object
+              fields:
+                - { label: "Text", name: "text", widget: "markdown" }
+                - { label: "Image", name: "image", widget: "image" }
+
+            # PICTURE/TEXT - RIGHT
+            - label: "Split Right"
+              name: "splitright"
+              widget: object
+              fields:
+                - { label: "Text", name: "text", widget: "markdown" }
+                - { label: "Image", name: "image", widget: "image" }
+
+            # IMAGE GALLERY
+            - label: "Image Gallery"
+              name: "imagegallery"
+              widget: object
+              fields:
+                - label: "Image Gallery"
+                  name: "imagegallery"
+                  widget: list
+                  fields:
+                    - { label: "Title", name: "title", widget: "string" }
+                    - { label: "Image", name: "image", widget: "image" }
+                    - { label: "Text", name: "text", widget: "markdown" }  
+
+            # CONTACT BLOCK
+            - label: "Contact"
+              name: "contactblock"
+              widget: object
+              fields:
+                - { label: "Thankyou Text", name: "thankyoutext", widget: "markdown" }
+                - label: "Extra Info"
+                  name: "extrainfo"
+                  widget: list
+                  fields:
+                    - { label: "Title", name: "title", widget: "string" }
+                    - { label: "Image", name: "image", widget: "image", required: false }
+                    - { label: "Text", name: "text", widget: "markdown" } 
+      
+        - label: "metadata"
+          name: "metadata"
+          widget: "object"
+          collapsed: true
+          fields: 
+            - label: "SEO"
+              name: "seo"
+              widget: "object"
+              collapsed: true
+              fields:
+                - { label: "Title", name: "title", widget: "string", required: false }
+                - { label: "Description", name: "description", widget: "string", required: false } 
+                - { label: "Image", name: "image", widget: "image", required: false }
+                - { label: "Image Alt Text", name: "imagealt", widget: "string", required: false }
+
+        - { label: "PageType", name: "pagetype", widget: 'hidden', default: 'content-page' }
+        - { label: "Show On Site", name: "showonsite", widget: "boolean", default: true, required: false }                 
+
+    - label: "Home Page"
+      name: "home"
+      format: "json"
+      file: "content/home.json"
+      fields:
+        - { label: 'Title', name: 'title', widget: 'string', required: false }          
+        - label: "Hero"
+          name: "hero"
+          widget: object
+          collapsed: true
+          fields:
+            - { label: 'Title', name: 'title', widget: 'string', required: false }          
+            - { label: "Sub Title", name: "subtitle", widget: "string", required: false }
+            - { label: 'Background Image', name: 'backgroundimage', widget: 'image', required: false }          
+
+        - label: "Sections"
+          name: "sections"
+          widget: "list"
+          types:
+            - label: "Hero"
+              name: "hero"
+              widget: object
+              fields:
+                - { label: 'Title', name: 'title', widget: 'string', required: false }          
+                - { label: "Sub Title", name: "subtitle", widget: "string", required: false }
+                - { label: 'Background Image', name: 'backgroundimage', widget: 'image', required: false }          
+
+            - label: "Fixed Background"
+              name: "fixedbackground"
+              widget: object
+              fields:
+                - { label: 'Title', name: 'title', widget: 'string', required: false }          
+                - { label: "Sub Title", name: "subtitle", widget: "string", required: false }
+                - { label: "Text Colour", name: "textcolor", widget: "color", required: true}
+                - { label: 'Background Image', name: 'backgroundimage', widget: 'image', required: true }          
+
+            # BODY TEXT
+            - label: "Body Text"
+              name: "bodytext"
+              widget: object
+              fields:
+                - { label: "Text Area", name: "bodytext", widget: "markdown" }    
+            
+
+            # SPOTLIGHT
+            - label: "Spotlight"
+              name: "spotlight"
+              widget: object
+              fields:
+                - label: "Spotlight"
+                  name: "spotlight"
+                  widget: list
+                  fields:
+                    - { label: "Title", name: "title", widget: "string" }
+                    - { label: "Image", name: "image", widget: "image" }
+                    - { label: "Text", name: "text", widget: "markdown" }
+
+            # PICTURE/TEXT - LEFT
+            - label: "Split Left"
+              name: "splitleft"
+              widget: object
+              fields:
+                - { label: "Text", name: "text", widget: "markdown" }
+                - { label: "Image", name: "image", widget: "image" }
+
+            # PICTURE/TEXT - RIGHT
+            - label: "Split Right"
+              name: "splitright"
+              widget: object
+              fields:
+                - { label: "Text", name: "text", widget: "markdown" }
+                - { label: "Image", name: "image", widget: "image" }
+
+            # IMAGE GALLERY
+            - label: "Image Gallery"
+              name: "imagegallery"
+              widget: object
+              fields:
+                - label: "Image Gallery"
+                  name: "imagegallery"
+                  widget: list
+                  fields:
+                    - { label: "Title", name: "title", widget: "string" }
+                    - { label: "Image", name: "image", widget: "image" }
+                    - { label: "Text", name: "text", widget: "markdown" }  
+
+            # CONTACT BLOCK
+            - label: "Contact"
+              name: "contactblock"
+              widget: object
+              fields:
+                - { label: "Thankyou Text", name: "thankyoutext", widget: "markdown" }
+                - label: "Extra Info"
+                  name: "extrainfo"
+                  widget: list
+                  fields:
+                    - { label: "Title", name: "title", widget: "string" }
+                    - { label: "Image", name: "image", widget: "image", required: false }
+                    - { label: "Text", name: "text", widget: "markdown" } 
+
+        - label: "metadata"
+          name: "metadata"
+          widget: "object"
+          collapsed: true
+          fields: 
+            - label: "SEO"
+              name: "seo"
+              widget: "object"
+              collapsed: true
+              fields:
+                - { label: "Title", name: "title", widget: "string", required: false }
+                - { label: "Description", name: "description", widget: "string", required: false } 
+                - { label: "Image", name: "image", widget: "image", required: false }
+                - { label: "Image Alt Text", name: "imagealt", widget: "string", required: false }
+
+        - { label: "PageType", name: "pagetype", widget: 'hidden', default: 'content-page' }
+
+                    

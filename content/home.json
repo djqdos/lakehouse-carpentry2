@@ -1,0 +1,30 @@
+{
+  "title": "Home Page",
+  "hero": {
+    "title": "Lakehouse Carpentry",
+    "backgroundimage": "/img/20180803_173036.jpg",
+    "subtitle": ""
+  },
+  "seo": {
+    "description": "Lakehouse Carpentry",
+    "metatags": "corian, woodwork, other meta tags"
+  },
+  "metadata": {
+    "opengraph": {
+      "title": "OpengraphTitle",
+      "description": "OpengraphDescription",
+      "image": "/img/1.png",
+      "imagealt": "ImageAlt"
+    },
+    "seo": {
+      "title": "Lakehouse Carpentry",
+      "description": "Home Page Description"
+    },
+    "twitter": {
+      "twittertitle": "TwitterTitle",
+      "twitterdescription": "TwitterDesc",
+      "twitterimage": "/img/1.png",
+      "twitterimagealt": "ImageAlt"
+    }
+  }
+}
