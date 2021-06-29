@@ -1,5 +1,7 @@
 <template>
-    <div class="body-text page-max" v-html="$md.render(block.bodytext)"></div>
+    <div class="page-max">
+        <div class="body-text" v-html="$md.render(block.bodytext)"></div>
+    </div>
 </template>
 
 <script>
@@ -12,8 +14,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
-    .body-text {
-        margin-top: 2em;
-        padding-bottom: 2em;
+    .body-text {  
+        border-left: $border-width solid $accent-color;
+        padding: 1em;
+        background-color: $light-grey;
     }
 </style>

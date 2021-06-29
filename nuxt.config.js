@@ -73,7 +73,8 @@ export default {
       ]
     }] ,
     '@nuxtjs/markdownit',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxtjs/style-resources'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -139,5 +140,10 @@ export default {
     routes() {
       return getRoutes();
     }
+  },
+  styleResources: {
+    scss: [
+      '@/assets/css/partials/_variables.scss'
+    ]
   }
 }

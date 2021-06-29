@@ -130,8 +130,22 @@ export default {
         font-weight: bold; 
         position: relative;   
 
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            height: $border-width;
+            width: 100%;
+            background-color: $accent-color;
+            transform: scaleX(0);            
+            transition: all 200ms linear 0s;
+        }
 
-
+        &:hover::after {
+            opacity: 1;    
+            transform: scaleX(1);
+        }
     }
 
     .burgerToggle {

@@ -1,6 +1,9 @@
 <template>
-    <client-only>
-        <div class="contactus page-max">
+    <div class="contact-container">    
+        <div class="page-max">
+        <h2 v-if="block.heading" class="heading">{{ block.heading }}</h2>
+        <client-only>
+        <div class="contactus">
             <div class="formSection">                                
                 <div class="formContainer" ref="formContainer">
                 <ValidationObserver ref="form">
@@ -66,6 +69,8 @@
             </div>
         </div>   
     </client-only>
+    </div>
+    </div>
 </template>
 
 <script>
@@ -146,6 +151,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+    .contact-container {
+        background-color: $light-grey;
+    }
+
     .contactus {
         display: grid;
         grid-template-columns: 2fr 1fr;
@@ -167,7 +176,7 @@ export default {
             position: relative;
 
             border: 0;
-            border-bottom: 1px solid black;
+            border-bottom: 2px solid $accent-color;
             
         }
 

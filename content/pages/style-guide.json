@@ -13,19 +13,20 @@
         {
           "title": "Woodwork #1",
           "image": "/img/1.png",
-          "text": "This is the spotlight text for woodworking.."
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis interdum pellentesque. In sodales cursus finibus. Donec vitae tempor lacus"
         },
         {
           "title": "Corian Spotlight",
           "image": "/img/2.png",
-          "text": "This is the spotlight for #2"
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis interdum pellentesque. In sodales cursus finibus. Donec vitae tempor lacus."
         },
         {
           "title": "Spotlight 3",
           "image": "/img/3.png",
-          "text": "Spotlight #3"
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis interdum pellentesque. In sodales cursus finibus. Donec vitae tempor lacus."
         }
-      ]
+      ],
+      "heading": "What we do"
     },
     {
       "type": "fixedbackground",
@@ -60,67 +61,96 @@
           "thankyoutext": "Thanks for submitting!"
         }
       ],
-      "thankyoutext": "Thanks for your submission!"
+      "thankyoutext": "Thanks for your submission!",
+      "heading": "Contact Us"
     },
     {
       "type": "imagegallery",
       "imagegallery": [
         {
-          "title": "Image 1",
+          "title": "Corian Kitchen",
           "image": "/img/20180803_173028.jpg",
-          "text": "sfsfsfs"
+          "text": "Corian Worktop with hardwood floor"
         },
         {
-          "title": "asdfas",
+          "title": "Corian Kitchen",
           "image": "/img/20180803_173036.jpg",
-          "text": "asdfsdfa"
+          "text": "Corian worktop with moulded skirts"
         },
         {
-          "title": "sdfasfsa",
+          "title": "Corian Kitchen Island",
           "image": "/img/20180803_173040.jpg",
-          "text": "asdfsaf"
+          "text": "Polished kitchen island"
         },
         {
-          "title": "dhgfhgfh",
+          "title": "Corian Kitchen",
+          "image": "/img/20180803_173028.jpg",
+          "text": "Corian Worktop with hardwood floor"
+        },
+        {
+          "title": "Corian Kitchen",
+          "image": "/img/20180803_173036.jpg",
+          "text": "Corian worktop with moulded skirts"
+        },
+        {
+          "title": "Corian Kitchen Island",
+          "image": "/img/20180803_173040.jpg",
+          "text": "Polished kitchen island"
+        },
+        {
+          "title": "Corian Kitchen",
+          "image": "/img/20180803_173028.jpg",
+          "text": "Corian Worktop with hardwood floor"
+        },
+        {
+          "title": "Corian Kitchen",
+          "image": "/img/20180803_173036.jpg",
+          "text": "Corian worktop with moulded skirts"
+        }
+      ],
+      "heading": "Latest Projects"
+    },
+    {
+      "type": "testimonials",
+      "heading": "What People Say",
+      "testimonials": [
+        {
           "image": "/img/nev2.png",
-          "text": "fhfghfgh"
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis interdum pellentesque. In sodales cursus finibus. Donec vitae tempor lacus.",
+          "author": "Bob"
         },
         {
-          "title": "fghfjghhgkhg",
-          "image": "/img/3.png",
-          "text": "sdfgsdgds"
-        },
-        {
-          "title": "fghfjghhgkhg",
-          "image": "/img/3.png",
-          "text": "sdfgsdgds"
-        },
-        {
-          "title": "fghfjghhgkhg",
-          "image": "/img/3.png",
-          "text": "sdfgsdgds"
-        },
-        {
-          "title": "fghfjghhgkhg",
-          "image": "/img/3.png",
-          "text": "sdfgsdgds"
-        },
-        {
-          "title": "fghfjghhgkhg",
-          "image": "/img/3.png",
-          "text": "sdfgsdgds"
-        },
-        {
-          "title": "dhgfhgfh",
+          "author": "Jim",
           "image": "/img/nev2.png",
-          "text": "fhfghfgh"
-        },
-        {
-          "title": "dhgfhgfh",
-          "image": "/img/nev2.png",
-          "text": "fhfghfgh"
-        }                
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus venenatis interdum pellentesque. In sodales cursus finibus. Donec vitae tempor lacus."
+        }
       ]
+    },
+    {
+      "type": "servicelist",
+      "servicelist": [
+        {
+          "servicename": "Corian",
+          "text": "# Corian\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. In non vehicula mi, ut molestie velit. Ut dictum sed leo eu molestie. In sed laoreet orci, ut tempus purus. In eget arcu at urna vulputate euismod. Integer eu aliquam ex. Duis ultrices leo vel ante accumsan, eu malesuada nunc tempor. Nam id nibh justo. Proin tristique pretium dolor. Pellentesque vitae malesuada odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus sed metus sit amet ex tincidunt tempus id vel odio.\n\nSuspendisse tincidunt justo nec lacinia facilisis. Duis arcu enim, venenatis vitae odio id, ullamcorper lacinia quam. Sed id sem interdum, mollis tellus vel, fringilla tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi tempus consequat magna, vitae imperdiet nisi. Ut eleifend euismod neque, eget faucibus risus tempor sed. Aliquam tempus mi eget ante rutrum pharetra. Nunc ac neque at nisi scelerisque lacinia id et leo.\n\nMaecenas vel sapien ipsum. Quisque nec velit id urna mollis sollicitudin vel at felis. Suspendisse sed lectus nec elit vulputate pretium. Suspendisse eu lobortis diam, ut cursus orci. Sed id libero vitae elit auctor ultricies. Suspendisse at dui sapien. Vivamus eget justo sit amet magna elementum interdum ac a sapien."
+        },
+        {
+          "servicename": "Woodwork",
+          "text": "# Woodwork\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. In non vehicula mi, ut molestie velit. Ut dictum sed leo eu molestie. In sed laoreet orci, ut tempus purus. In eget arcu at urna vulputate euismod. Integer eu aliquam ex. Duis ultrices leo vel ante accumsan, eu malesuada nunc tempor. Nam id nibh justo. Proin tristique pretium dolor. Pellentesque vitae malesuada odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus sed metus sit amet ex tincidunt tempus id vel odio.\n\nSuspendisse tincidunt justo nec lacinia facilisis. Duis arcu enim, venenatis vitae odio id, ullamcorper lacinia quam. Sed id sem interdum, mollis tellus vel, fringilla tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi tempus consequat magna, vitae imperdiet nisi. Ut eleifend euismod neque, eget faucibus risus tempor sed. Aliquam tempus mi eget ante rutrum pharetra. Nunc ac neque at nisi scelerisque lacinia id et leo.\n\nMaecenas vel sapien ipsum. Quisque nec velit id urna mollis sollicitudin vel at felis. Suspendisse sed lectus nec elit vulputate pretium. Suspendisse eu lobortis diam, ut cursus orci. Sed id libero vitae elit auctor ultricies. Suspendisse at dui sapien. Vivamus eget justo sit amet magna elementum interdum ac a sapien."
+        },
+        {
+          "servicename": "Something Else",
+          "text": "# Woodwork\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. In non vehicula mi, ut molestie velit. Ut dictum sed leo eu molestie. In sed laoreet orci, ut tempus purus. In eget arcu at urna vulputate euismod. Integer eu aliquam ex. Duis ultrices leo vel ante accumsan, eu malesuada nunc tempor. Nam id nibh justo. Proin tristique pretium dolor. Pellentesque vitae malesuada odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus sed metus sit amet ex tincidunt tempus id vel odio.\n\nSuspendisse tincidunt justo nec lacinia facilisis. Duis arcu enim, venenatis vitae odio id, ullamcorper lacinia quam. Sed id sem interdum, mollis tellus vel, fringilla tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi tempus consequat magna, vitae imperdiet nisi. Ut eleifend euismod neque, eget faucibus risus tempor sed. Aliquam tempus mi eget ante rutrum pharetra. Nunc ac neque at nisi scelerisque lacinia id et leo.\n\nMaecenas vel sapien ipsum. Quisque nec velit id urna mollis sollicitudin vel at felis. Suspendisse sed lectus nec elit vulputate pretium. Suspendisse eu lobortis diam, ut cursus orci. Sed id libero vitae elit auctor ultricies. Suspendisse at dui sapien. Vivamus eget justo sit amet magna elementum interdum ac a sapien."
+        },
+        {
+          "servicename": "Another Item",
+          "text": "# Woodwork\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. In non vehicula mi, ut molestie velit. Ut dictum sed leo eu molestie. In sed laoreet orci, ut tempus purus. In eget arcu at urna vulputate euismod. Integer eu aliquam ex. Duis ultrices leo vel ante accumsan, eu malesuada nunc tempor. Nam id nibh justo. Proin tristique pretium dolor. Pellentesque vitae malesuada odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus sed metus sit amet ex tincidunt tempus id vel odio.\n\nSuspendisse tincidunt justo nec lacinia facilisis. Duis arcu enim, venenatis vitae odio id, ullamcorper lacinia quam. Sed id sem interdum, mollis tellus vel, fringilla tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi tempus consequat magna, vitae imperdiet nisi. Ut eleifend euismod neque, eget faucibus risus tempor sed. Aliquam tempus mi eget ante rutrum pharetra. Nunc ac neque at nisi scelerisque lacinia id et leo.\n\nMaecenas vel sapien ipsum. Quisque nec velit id urna mollis sollicitudin vel at felis. Suspendisse sed lectus nec elit vulputate pretium. Suspendisse eu lobortis diam, ut cursus orci. Sed id libero vitae elit auctor ultricies. Suspendisse at dui sapien. Vivamus eget justo sit amet magna elementum interdum ac a sapien."
+        },
+        {
+          "servicename": "Yet Another",
+          "text": "# Woodwork\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. In non vehicula mi, ut molestie velit. Ut dictum sed leo eu molestie. In sed laoreet orci, ut tempus purus. In eget arcu at urna vulputate euismod. Integer eu aliquam ex. Duis ultrices leo vel ante accumsan, eu malesuada nunc tempor. Nam id nibh justo. Proin tristique pretium dolor. Pellentesque vitae malesuada odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus sed metus sit amet ex tincidunt tempus id vel odio.\n\n![](/img/2.png)\n\nSuspendisse tincidunt justo nec lacinia facilisis. Duis arcu enim, venenatis vitae odio id, ullamcorper lacinia quam. Sed id sem interdum, mollis tellus vel, fringilla tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi tempus consequat magna, vitae imperdiet nisi. Ut eleifend euismod neque, eget faucibus risus tempor sed. Aliquam tempus mi eget ante rutrum pharetra. Nunc ac neque at nisi scelerisque lacinia id et leo.\n\nMaecenas vel sapien ipsum. Quisque nec velit id urna mollis sollicitudin vel at felis. Suspendisse sed lectus nec elit vulputate pretium. Suspendisse eu lobortis diam, ut cursus orci. Sed id libero vitae elit auctor ultricies. Suspendisse at dui sapien. Vivamus eget justo sit amet magna elementum interdum ac a sapien."
+        }
+      ],
+      "heading": "Services"
     }
   ],
   "hero": {

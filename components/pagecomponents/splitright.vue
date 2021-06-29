@@ -1,7 +1,9 @@
 <template>
-    <div class="split-right page-max">
-        <img :src="block.image" alt="" class="split-right__image" />
-        <div v-html="$md.render(block.text)" class="split-right__text"></div>        
+    <div class="page-max">
+        <div class="split-right">
+            <img :src="block.image" alt="" class="split-right__image" />
+            <div v-html="$md.render(block.text)" class="split-right__text"></div>        
+        </div>
     </div>
 </template>
 
@@ -22,6 +24,12 @@ export default {
         margin-top: 1em;             
         .split-right__image {
             width: 100%;
+        }
+
+        .split-right__text {
+            border-right: $border-width solid $accent-color;
+            padding: 1em;
+            background-color: #efefef;            
         }
     }
 

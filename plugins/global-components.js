@@ -10,6 +10,8 @@ import imagegallery from '../components/pagecomponents/imagegallery.vue'
 import contactblock from '../components/pagecomponents/contactblock.vue'
 import fixedbackground from '../components/pagecomponents/fixedbackground.vue'
 import sociallinks from '../components/sociallinks.vue'
+import testimonials from '../components/pagecomponents/testimonials.vue'
+import servicelist from '../components/pagecomponents/servicelist.vue'
 
 
 const components = {
@@ -21,6 +23,8 @@ const components = {
     imagegallery,
     contactblock,
     fixedbackground,
+    testimonials,
+    servicelist,
 
     sociallinks,
 }

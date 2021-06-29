@@ -1,4 +1,7 @@
+@import 'partials/variables';
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap');
 
 :root {
     --ff-body:'Poppins', sans-serif;
@@ -12,7 +15,9 @@
     --header-height: 70px;
     --footer-height: 8vh;
 
-    --max-width: 80%;
+    --max-width: 90%;
+
+    font-size: 22px;
 }
 
 *,
@@ -33,12 +38,31 @@ ul, ol {
 }
 
 body {
-    background: var(--clr-background);
-    font-family: 'Poppins', sans-serif;
-    font-size: .7em;
+    background: var(--clr-background);    
+    //font-family: 'Poppins', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     overflow-x: hidden;
+    color: black;    
+}
 
-    color: black;
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 1px;    
+}
+
+h1 { font-size: 1.5rem;  }
+h2 { font-size: 1.4rem; margin-bottom: 0.9em;}
+h3 { font-size: 1.3rem; }
+h4 { font-size: 1.2rem; }
+h5 { font-size: 1.1rem; }
+h6 { font-size: 1rem; }
+
+p, li {
+    line-height: 1.5rem;    
+}
+
+p {
+    margin-bottom: 1em;
 }
 
 .container {
@@ -68,6 +92,7 @@ section.main {
 .page-max {
     max-width: var(--max-width);
     margin: 0 auto;
+    padding: 4em 0;
 }
 
 .hero {
@@ -75,10 +100,10 @@ section.main {
     h1 {
         opacity: 0;
         font-size: 4.5vmax;            
-        text-shadow: 5px 5px 4px rgba(0,0,0,0.4);
+        text-shadow: 5px 5px 4px rgba(0,0,0,0.4);        
     }
 
-    p.subtitle {
+    h2 {
         opacity: 0;
         font-size: 3vmax;
         letter-spacing: -1px;
@@ -90,7 +115,22 @@ section.main {
     }
 }
 
+.heading {    
+    font-size: 1.5rem;
+    position: relative;
+    padding-bottom: .3em;
+    margin-bottom: 2rem;
+    &::after {
+        position: absolute;
+        content: "";
+        height: $border-width;
+        width: 50px;
+        background-color: $accent-color;
+        bottom: 0;
+        left: 0;
 
+    }
+}
 
 .mobilemenu-enter-active, 
 .mobilemenu-leave-active {
@@ -105,6 +145,27 @@ section.main {
 
 .vm--overlay {
     background-color: rgba(0,0,0,0.75) !important;
+}
+
+.service-content {
+    
+
+    h1 {            
+        font-size: 1.5rem;
+        position: relative;
+        padding-bottom: .3em;
+        margin-bottom: 2rem;
+        &::after {
+            position: absolute;
+            content: "";
+            height: $border-width;
+            width: 50px;
+            background-color: $accent-color;
+            bottom: 0;
+            left: 0;
+
+        }
+    }          
 }
 
 @media screen and (max-width: 768px) { 
@@ -131,14 +192,14 @@ section.main {
         margin-top: -2em;
     }
 
-    .hero p.subtitle {
+    .hero h2 {
         font-size: 5vmax;
     }
 
 
 
     footer {        
-        .page-max {
+        .page-max {            
             grid-template-columns: 1fr !important;
 
             .social-links {

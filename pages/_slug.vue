@@ -3,12 +3,6 @@
         <hero :block="content.hero"></hero>
 
         <template v-for="(section, index) in content.sections">
-            <div class="page-max" v-if="isStyleGuide" :key="`style-header-${section.type}`">
-                <div class="style-guide-header">
-                    Section Name: '{{ section.type }}'
-                </div>
-            </div>
-
             <component v-intersection :is="section.type" :block="section" :key="index"></component>
         </template>
 
@@ -20,7 +14,7 @@ import metadataMixin from '@/mixins/metadata'
 
 export default {
     mixins: [metadataMixin],
-    
+
     async asyncData({ $content, params, error}) {
         let content = await $content("pages", params.slug)
         .fetch();

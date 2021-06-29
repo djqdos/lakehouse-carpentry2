@@ -1,7 +1,9 @@
 <template>
-    <div class="split-left page-max">
-        <div v-html="$md.render(block.text)" class="split-left__text"></div>
-        <img :src="block.image" alt="" class="split-left__image" />
+    <div class="page-max">
+        <div class="split-left">
+            <div v-html="$md.render(block.text)" class="split-left__text"></div>
+            <img :src="block.image" alt="" class="split-left__image" />
+        </div>
     </div>
 </template>
 
@@ -20,6 +22,12 @@ export default {
         grid-template-columns: 1fr 1fr;
         gap: 1em;        
         margin-top: 1em; 
+
+        .split-left__text {
+            border-left: $border-width solid $accent-color;
+            padding: 1em;
+            background-color: #efefef;            
+        }
 
         .split-left__image {
             width: 100%;

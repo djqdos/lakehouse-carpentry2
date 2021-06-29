@@ -1,9 +1,9 @@
-<template>
+h<template>
         <section class="main" :style="{ backgroundImage :`url(${block.backgroundimage})` }">
             <div class="page-max">
                 <div class="hero">
                     <h1 v-if="block.title">{{ block.title }}</h1>
-                    <p class="subtitle" v-if="block.subtitle">{{ block.subtitle }}</p>
+                    <h2 v-if="block.subtitle">{{ block.subtitle }}</h2>
                 </div>
             </div>
         </section>
@@ -26,7 +26,7 @@ export default {
         });
 
         this.$anime({
-            targets: 'p.subtitle',
+            targets: 'h2',
             opacity: [0, 1],
             translateX: [100, 0],
             easing: 'easeOutCubic',

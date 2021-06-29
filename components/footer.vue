@@ -45,7 +45,8 @@ export default {
         padding-top: 1em;
         padding-bottom: 1em;        
 
-        .page-max {            
+        .page-max {  
+            padding: 0;          
             display: grid;
             align-items: center;
             gap: 1em;
