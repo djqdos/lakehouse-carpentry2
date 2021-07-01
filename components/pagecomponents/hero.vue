@@ -1,11 +1,13 @@
 h<template>
-        <section class="main" :style="{ backgroundImage :`url(${block.backgroundimage})` }">
-            <div class="page-max">
+        <section class="hero-container h-screen bg-no-repeat bg-center bg-cover grid place-items-center" 
+                :style="{ backgroundImage :`url(${block.backgroundimage})` }">
+            
                 <div class="hero">
-                    <h1 v-if="block.title">{{ block.title }}</h1>
-                    <h2 v-if="block.subtitle">{{ block.subtitle }}</h2>
+                    <h1 v-if="block.title"
+                        class="text-white mb-4 opacity-0 text-6xl lg:text-8xl ">{{ block.title }}</h1>
+                    <h2 v-if="block.subtitle"
+                        class="opacity-0 text-3xl lg:text-5xl text-white">{{ block.subtitle }}</h2>
                 </div>
-            </div>
         </section>
 </template>
 
@@ -55,7 +57,16 @@ export default {
 </script>
 
 <style scoped lang="scss">
-    .main {
-        opacity: 0;
+    .hero {
+        h1, h2, h3, h4, h5, h6 {
+            font-family: "Open Sans", sans-serif;
+            font-weight: bold;
+            text-shadow: 5px 5px 4px rgba(0,0,0,0.5);
+            text-align: center;
+            word-wrap: normal;                                      
+        }
+
+        //@apply w-3/5 md:w-full;
+        @apply w-full;
     }
 </style>

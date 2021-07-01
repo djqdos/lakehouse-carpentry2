@@ -1,9 +1,9 @@
 <template>
-    <div class="testimonials-container">
+    <div class="testimonials-container bg-gray-100">
         <div class="page-max">
-            <h2 class="heading">{{ block.heading }}</h2>
+            <h2 class="main-heading">{{ block.heading }}</h2>
 
-            <div class="testimonials">
+            <div class="testimonialsGrid">
                 <div v-for="(testimonial, index) in block.testimonials" 
                      :key="index"
                      class="testimonial-item">
@@ -28,29 +28,17 @@ export default {
 </script>
 
 <style scoped lang="scss">
-    .testimonials-container {
-        background-color: $light-grey;
+    .testimonialsGrid {
+        @apply grid grid-cols-1 gap-4;
+        @apply md:grid-cols-2;
+
     }
 
+    .testimonial-item {    
+        @apply grid grid-cols-1 gap-4;
+        @apply lg:grid-cols-2;
 
-    .testimonials {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1em;        
-        
-    }
-
-    .testimonial-item {        
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        background-color: white;
-        img {            
-        }
-
-        .testimonial-item__details {
-            padding: 1em;            
-
-            p.quote {
+        p.quote {
                 &::before {
                     content: open-quote;
                     color: $accent-color;
@@ -61,15 +49,48 @@ export default {
                     color: $accent-color;
                 }
             }
+        p.author {
+            @apply text-left text-accent;
 
-            p.author {
-                font-style: italic;
-                text-align: right;
-                color: $accent-color;
-                &::before {
-                    content: "- ";
-                }
+            &::before {
+                content: "- ";
             }
         }
     }
+
+
+    // .testimonials-container {
+    //     background-color: $light-grey;
+    // }
+
+
+    // .testimonials {
+    //     display: grid;
+    //     grid-template-columns: repeat(2, 1fr);
+    //     gap: 1em;        
+        
+    // }
+
+    // .testimonial-item {        
+    //     display: grid;
+    //     grid-template-columns: 1fr 2fr;
+    //     background-color: white;
+    //     img {            
+    //     }
+
+    //     .testimonial-item__details {
+    //         padding: 1em;            
+
+            
+
+            // p.author {
+            //     font-style: italic;
+            //     text-align: right;
+            //     color: $accent-color;
+            //     &::before {
+            //         content: "- ";
+            //     }
+            // }
+    //     }
+    // }
 </style>

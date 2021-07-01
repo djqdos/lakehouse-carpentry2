@@ -4,10 +4,6 @@
   "title": "Style Guide",
   "sections": [
     {
-      "type": "bodytext",
-      "bodytext": "# Bodytext Heading 1\n\n## Bodytext Heading 2\n\n**Bold** *Italic* \n\n> Quoted Text\n\n* Bullet Point 1\n* Bullet Point 2\n* Bullet Point 3\n\n1. Numbered List 1\n2. Numbered List 2\n3. Numbered List 3"
-    },
-    {
       "type": "spotlight",
       "spotlight": [
         {
@@ -29,12 +25,7 @@
       "heading": "What we do"
     },
     {
-      "type": "fixedbackground",
-      "title": "ert",
-      "subtitle": "dfgdfg",
-      "bodytext": "# Heading 1\n\n**Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean imperdiet massa id est hendrerit venenatis. Quisque a diam massa. Nulla sed lacinia elit. Donec libero sem, imperdiet pellentesque risus sit amet, tincidunt accumsan metus. Quisque consequat ipsum sit amet hendrerit tristique. Nulla facilisi. Sed imperdiet gravida nisi, ut fermentum massa luctus id**",
-      "backgroundimage": "/img/2.png",
-      "textcolor": "#ffffff"
+      "type": "slider"
     },
     {
       "type": "splitleft",
@@ -45,12 +36,6 @@
       "type": "splitright",
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra nunc metus, et laoreet risus efficitur sed. Cras venenatis risus non lorem ultrices maximus. Maecenas eget maximus magna. Quisque laoreet eu augue at faucibus. Quisque sit amet tempor mi. Aenean nec nisi non nisi ullamcorper scelerisque sit amet eget lacus. Aliquam ullamcorper tortor sit amet ante dignissim, nec finibus urnafaucibus. Praesent rhoncus volutpat eros. Vivamus placerat magna diam, ac convallis elit venenatis non.",
       "image": "/img/nev2.png"
-    },
-    {
-      "type": "hero",
-      "title": "Sub-Hero",
-      "subtitle": "Sub-Hero SubTitle",
-      "backgroundimage": "/img/20180803_173028.jpg"
     },
     {
       "type": "contactblock",
@@ -151,7 +136,7 @@
         }
       ],
       "heading": "Services"
-    }
+    }                
   ],
   "hero": {
     "title": "Style Guide",

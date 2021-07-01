@@ -1,10 +1,13 @@
 <template>
-    <div class="page-max">
-        <div class="split-right">
-            <img :src="block.image" alt="" class="split-right__image" />
-            <div v-html="$md.render(block.text)" class="split-right__text"></div>        
+    <section class="splitright-container">
+        <div class="page-max">
+            <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+                <img :src="block.image" alt="" class="split-right__image w-full" />
+                <div v-html="$md.render(block.text)"
+                     class="sm:order-2 border-r-8 p-4 pt-0 cms-header border-accent bg-gray-100 "></div>        
+            </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>
@@ -17,34 +20,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-    .split-right {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1em;        
-        margin-top: 1em;             
-        .split-right__image {
-            width: 100%;
-        }
-
-        .split-right__text {
-            border-right: $border-width solid $accent-color;
-            padding: 1em;
-            background-color: #efefef;            
-        }
-    }
 
 
-    @media screen and (max-width: 768px) { 
-        .split-right {    
-            grid-template-columns: 1fr;     
-
-            .split-right__image{ 
-                order: 1;
-            }
-
-            .split-right__text {
-                order: 2;
-            }
-        }        
-    }
 </style>

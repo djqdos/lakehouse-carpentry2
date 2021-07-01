@@ -13,7 +13,6 @@ import sociallinks from '../components/sociallinks.vue'
 import testimonials from '../components/pagecomponents/testimonials.vue'
 import servicelist from '../components/pagecomponents/servicelist.vue'
 
-
 const components = {
     hero,
     spotlight,
@@ -25,7 +24,6 @@ const components = {
     fixedbackground,
     testimonials,
     servicelist,
-
     sociallinks,
 }
 

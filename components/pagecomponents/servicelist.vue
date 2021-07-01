@@ -1,15 +1,19 @@
 <template>
     <div class="service-list-container">
         <div class="page-max">
-            <h2 v-if="block.heading" class="heading">{{ block.heading }}</h2>
+            <h2 class="main-heading" v-if="block.heading">{{ block.heading }}</h2>
+
             <div class="service-list" v-if="block.servicelist">                
                 <div class="service-link">
-                    <a v-for="(link, index) in block.servicelist" :key="index" @click="showService(index, $event)">
+                    <a v-for="(link, index) in block.servicelist" 
+                       :key="index" 
+                       @click="showService(index, $event)"                       
+                       >
                         {{ link.servicename}}
                     </a>
                 </div>
 
-                <div class="service-content" v-html="$md.render(block.servicelist[0].text)">
+                <div class="service-content md:col-span-9 cms-header" v-html="$md.render(block.servicelist[0].text)">
 
                 </div>
             </div>
@@ -65,47 +69,25 @@ export default {
 </script>
 
 <style scoped lang="scss">
+
+
+
     .service-list {
-        display: grid;
-        grid-template-columns: 1fr 4fr;
-        gap: 1em;
+        @apply grid grid-cols-1 gap-4 md:grid-cols-12 ;
     }
 
     .service-link {
+        @apply md:col-span-3;
+
         a {
-            display: block;
-            border: 1px solid $accent-color;
-            padding: 1em;            
-            margin-bottom: 1em;
+            @apply inline-block p-2 mr-2 mb-2 border border-accent;
+            @apply md:block md:p-4 md:border md:mb-4 md:border-accent;
+            
             cursor: pointer;
 
-            transform: background 300ms;
-
-            &:first-child {
-                margin-top: 0;
-            }
-
             &:hover {
-                background-color: $accent-color;
-                color: white;
+                @apply bg-accent text-white;
             }
         }
     }
-
-    @media screen and (max-width: 768px) {
-        .service-list {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1em;
-        }
-
-        .service-link {            
-            margin: 0;
-            a {
-                display: inline-block;
-                margin: .2em;
-            }
-        }
-    }
-
 </style>

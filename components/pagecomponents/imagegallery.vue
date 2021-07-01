@@ -4,47 +4,32 @@
     </div> -->
   <div class="imagegallery-container">
     <div class="page-max">
-      <h2 v-if="block.heading" class="heading">{{ block.heading }}</h2>
+      <h2 v-if="block.heading" class="main-heading">{{ block.heading }}</h2>
 
-      <vue-masonry-wall :items="block.imagegallery" :options="masonryOptions">
-        <template v-slot:default="{ item }">
-          <div class="item">
+      <div class="imageGalleryGrid">
+        <div class="item" 
+             v-for="(item, index) in block.imagegallery"
+             :key="index">          
             <img :src="item.image" @click="showModal" />
             <div class="project-text">
               <div class="project-details">
                   <h4>{{ item.title }}</h4>
                 {{ item.text }}
               </div>
-            </div>
-          </div>
-        </template>
-      </vue-masonry-wall>
+            </div>          
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import VueMasonryWall from 'vue-masonry-wall'
-import imagegallerymodal from '~/components/pagecomponents/imagegallery_modal.vue'
-
 export default {
   name: 'imagegallery',
   props: {
     block: Object,
   },
 
-  data() {
-    return {
-      masonryOptions: {
-        width: 400,
-        padding: {
-          2: 4,
-          3: 4,
-          default: 4,
-        },
-      },
-    }
-  },
   methods: {
     showModal(e) {
       var data = {
@@ -54,28 +39,16 @@ export default {
       this.$modal.show(imagegallerymodal, { block: data })
     },
   },
-
-  components: {
-    VueMasonryWall,
-    imagegallerymodal,
-  },
 }
 </script>
 
 <style scoped lang="scss">
-.image-gallery {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: masonry;
-  margin-top: 1em;
-  gap: 0.5em;
-}
+  .imageGalleryGrid {
+    @apply grid grid-cols-2 gap-4;
+    @apply md:grid-cols-4 grid-flow-row-dense;
+  }
 
-// Masonry
-.masonry-container {
-  column-count: 2;
-  column-gap: 0.5em;
-}
+
 
 .item {
   width: 100%;
@@ -124,12 +97,5 @@ export default {
   left: 20px;
   color: white;
   font-size: .9rem;
-}
-
-@media screen and (max-width: 768px) {
-  .masonry-container {
-    column-count: 2;
-    column-gap: 0.5em;
-  }
 }
 </style>

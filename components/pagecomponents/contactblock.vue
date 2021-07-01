@@ -1,9 +1,9 @@
 <template>
-    <div class="contact-container">    
+    <div class="contact-container bg-gray-100">    
         <div class="page-max">
-        <h2 v-if="block.heading" class="heading">{{ block.heading }}</h2>
+        <h2 v-if="block.heading" class="main-heading">{{ block.heading }}</h2>
         <client-only>
-        <div class="contactus">
+        <div class="contactusGrid">
             <div class="formSection">                                
                 <div class="formContainer" ref="formContainer">
                 <ValidationObserver ref="form">
@@ -12,55 +12,55 @@
                           method="post"
                           data-netlify-honeypot="bot-field"
                           @submit.prevent="validateSubmit" 
-                          ref="theform"
-                          
-                          >                
-                        <input type="hidden" name="form-name" value="contact" />
-                        <fieldset class="name">                    
-                            <ValidationProvider name="name" rules="required" v-slot="{ errors }"  class="provider-container">
-                                <input type="text" v-model="name" id="name" name="name" placeholder="Name" />
-                                <div class="error">{{ errors[0] }}</div>
-                            </ValidationProvider>
-                        </fieldset>
+                          ref="theform"                                                    
+                          >
+                            <div class="formGrid">
+                                <div class="formInnerGrid">
+                                    <fieldset class="name">                    
+                                        <ValidationProvider name="name" rules="required" v-slot="{ errors }"  class="provider-container">
+                                            <input type="text" v-model="name" id="name" name="name" placeholder="Name" />
+                                            <div class="error">{{ errors[0] }}</div>
+                                        </ValidationProvider>
+                                    </fieldset>
+                                
+                                    <fieldset class="email">                                                
+                                            <ValidationProvider name="email" rules="required|email" v-slot="{ errors }"  class="provider-container">
+                                                <input type="text" v-model="email" name="email" placeholder="Email" />
+                                                <div class="error">{{ errors[0] }}</div>
+                                            </ValidationProvider>                            
+                                    </fieldset>
+                                
+                                    <fieldset class="tel">                              
+                                            <ValidationProvider name="tel" rules="numeric" v-slot="{ errors }" class="provider-container">
+                                                <input type="tel" v-model="telephone" id="telephone" name="telephone" placeholder="Telephone Number" />
+                                                <div class="error">{{ errors[0] }}</div>
+                                            </ValidationProvider>                            
+                                    </fieldset>
 
-                        <fieldset class="email">                    
-                            
-                                <ValidationProvider name="email" rules="required|email" v-slot="{ errors }"  class="provider-container">
-                                    <input type="text" v-model="email" name="email" placeholder="Email" />
-                                    <div class="error">{{ errors[0] }}</div>
-                                </ValidationProvider>
-                            
-                        </fieldset>
+                                </div>
+                                <div class="grid grid-cols-1 gap-4">
+                                    <fieldset class="message">                    
+                                            <ValidationProvider name="message" rules="required" v-slot="{ errors }" class="provider-container">
+                                                <textarea id="message" v-model="message" name="message" placeholder="Message"></textarea>
+                                                <div class="error">{{ errors[0] }}</div>
+                                            </ValidationProvider>
+                                    </fieldset>
+                                </div>
+                                
+                                
+                            </div>
 
-                        <fieldset class="tel">  
-                            
-                                <ValidationProvider name="tel" rules="numeric" v-slot="{ errors }" class="provider-container">
-                                    <input type="tel" v-model="telephone" id="telephone" name="telephone" placeholder="Telephone Number" />
-                                    <div class="error">{{ errors[0] }}</div>
-                                </ValidationProvider>
-                            
-                        </fieldset>
-
-                        <fieldset class="message">                    
-
-                                <ValidationProvider name="message" rules="required" v-slot="{ errors }" class="provider-container">
-                                    <textarea id="message" v-model="message" name="message" placeholder="Message"></textarea>
-                                    <div class="error">{{ errors[0] }}</div>
-                                </ValidationProvider>
-
-                        </fieldset>
-
-                        <fieldset class="submit">
-                            <input type="submit" class="submit" value="Submit" />
-                        </fieldset>                
+                            <fieldset class="submit">
+                                    <input type="submit" class="submit" value="Submit" />
+                            </fieldset>            
                     </form>
                 </ValidationObserver>
                 </div>                
-                <div class="thankyou" ref="thankyou" v-html="$md.render(block.thankyoutext)">
+                <div class="thankyou hidden" ref="thankyou" v-html="$md.render(block.thankyoutext)">
                 </div>
             </div>
             <div class="other">
-                <div class="extra-info" v-for="(info, index) in block.extrainfo" :key="index">
+                <div class="extra-info cms-header" v-for="(info, index) in block.extrainfo" :key="index">
                     <h4>{{ info.title }}</h4>
                     <p>
                         {{ info.text}}
@@ -151,94 +151,40 @@ export default {
 </script>
 
 <style scoped lang="scss">
-    .contact-container {
-        background-color: $light-grey;
+    .contactusGrid {
+        @apply grid grid-cols-1 md:grid-cols-12 gap-4
     }
 
-    .contactus {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        gap: 1em;
-        margin-top: 1em;
-        form {
-            display: grid;            
-            gap: .5em;
-            grid-template-areas: "name message"
-                                 "email message"
-                                 "tel message"
-                                 "submit submit"
-        }
-
-        input, textarea {
-            padding: 1em;
-            width: 100%;
-            height: 100%;
-            position: relative;
-
-            border: 0;
-            border-bottom: 2px solid $accent-color;
-            
-        }
-
-        textarea {
-            height: 100%;
-        }
-
-        fieldset.name { grid-area: name; }
-        fieldset.email { grid-area: email; }
-        fieldset.tel { grid-area: tel; }
-        fieldset.message { grid-area: message; }
-        fieldset.submit { grid-area: submit; place-items: center; }
-
-        fieldset {
-            border: 0;
-        }
-
-        input[type="submit"] {
-            display: block;
-            width: auto;
-        }
-
-
-        .provider-container {
-            position: relative;
-        }
-
-        .error {
-            color: red;
-            font-size: .7em;
-
-        }
-
-        .thankyou {
-            display: none;
-            opacity: 0;
-            place-items: center;
-        }
+    .formSection {
+         @apply md:col-span-9;
     }
 
-    @media screen and (max-width: 768px) { 
-        .contactus {
-            grid-template-columns: 1fr;            
-
-            form {
-                display: block;                
-            }
-
-            input, label {
-                display: block;
-                width: 100%;
-            }
-
-            input {
-                padding: 1em;
-                margin-bottom: 1em;
-            }
-
-            textarea {
-                width: 100%;
-                padding: 1em;
-            }
-        }
+    .other {
+        @apply md:col-span-3;
     }
+
+    input, textarea {
+        @apply p-4 w-full border-b-2 border-accent;
+    }
+
+    input[type="submit"] {
+        @apply w-auto;
+    }
+
+    textarea {
+        @apply h-full;
+    }
+
+    .formGrid {
+        @apply grid grid-cols-1 md:grid-cols-2 gap-4 grid-flow-row;
+    }
+
+    .formInnerGrid {
+        @apply grid grid-cols-1 gap-4;
+    }
+
+    fieldset {
+        @apply pb-4;
+    }
+
 </style>

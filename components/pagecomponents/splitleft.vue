@@ -1,10 +1,14 @@
 <template>
-    <div class="page-max">
-        <div class="split-left">
-            <div v-html="$md.render(block.text)" class="split-left__text"></div>
-            <img :src="block.image" alt="" class="split-left__image" />
+    <section class="splitleft-container">        
+        <div class="page-max">
+            <div class="splitleft">                
+                <div v-html="$md.render(block.text)" 
+                     class="order-1 border-l-8 p-4 pt-0 cms-header border-accent bg-gray-100" >
+                </div>
+                <img :src="block.image" alt="" class="order-2 w-full" />
+            </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>
@@ -17,34 +21,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-    .split-left {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1em;        
-        margin-top: 1em; 
-
-        .split-left__text {
-            border-left: $border-width solid $accent-color;
-            padding: 1em;
-            background-color: #efefef;            
-        }
-
-        .split-left__image {
-            width: 100%;
-        }
-    }
-
-
-    @media screen and (max-width: 768px) { 
-        .split-left {    
-            grid-template-columns: 1fr;                              
-            .split-left__image{ 
-                order: 1;
-            }
-
-            .split-left__text {
-                order: 2;
-            }
-        }        
+    .splitleft {
+        @apply grid grid-cols-1 gap-4 md:grid-cols-2;
     }
 </style>

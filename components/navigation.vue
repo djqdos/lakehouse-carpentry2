@@ -1,27 +1,50 @@
 <template>
-    <nav>
+    <nav class="main-menu">
         <div class="logo">
             <nuxt-link to="/">
                 <img src="~assets/img/lakehouse-logo.png" alt="Lakehouse Carpentry logo" />
             </nuxt-link>
         </div>
-        <ul class="nav-links">
 
+        <ul class="menus">
             <li v-for="page in pages" :key="page.slug">
-                <nuxt-link :to="page.slug" class="hover">{{ page.title }}</nuxt-link>
+                <nuxt-link :to="page.slug">{{ page.title }}</nuxt-link>
             </li>
-
             <li>
-                <nuxt-link :to="staticpages.slug" class="hover">{{ staticpages.title }}</nuxt-link>
+                <nuxt-link :to="staticpages.slug">{{ staticpages.title }}</nuxt-link>
             </li>
-
         </ul>
 
-        <div class="burger" @click="navSlide">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
+        <button class="mobile-menu-button" @click="navSlide">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+
+
+        <aside class="mobile-nav-wrapper transform -translate-x-full">
+            <nav class="mobile-menu">
+                <div class="logo">
+                    <nuxt-link to="/" @click.native="navSlide">
+                        <img src="~assets/img/lakehouse-logo.png" alt="Lakehouse Carpentry logo" />
+                    </nuxt-link>
+                </div>               
+            </nav>
+            <ul class="mobile-links">
+                <li v-for="page in pages" :key="page.slug">
+                    <nuxt-link :to="page.slug" class="hover" @click.native="navSlide">{{ page.title }}</nuxt-link>
+                </li>
+
+                <li>
+                    <nuxt-link :to="staticpages.slug" @click.native="navSlide" class="hover">{{ staticpages.title }}</nuxt-link>
+                </li>
+            </ul>
+                <button class="mobile-menu-button" @click="navSlide">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M15.707 15.707a1 1 0 01-1.414 0l-5-5a1 1 0 010-1.414l5-5a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 010 1.414zm-6 0a1 1 0 01-1.414 0l-5-5a1 1 0 010-1.414l5-5a1 1 0 011.414 1.414L5.414 10l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+                    </svg>
+                </button>             
+        </aside>
     </nav>
 </template>
 
@@ -51,11 +74,11 @@ export default {
     },
 
     methods: {
-        navSlide() {
-            this.$emit('showMobileMenu');
-            const burger = document.querySelector(".burger");
-            //burger animation
-            burger.classList.toggle("burgerToggle");
+        navSlide(e) {            
+            const mobileMenu = document.querySelector(".mobile-nav-wrapper");
+            console.log("sdfhjskdfsd");
+            console.log("mobile nav = ", mobileMenu);
+            mobileMenu.classList.toggle("-translate-x-full");
         }
     }
 }
@@ -63,150 +86,82 @@ export default {
 
 
 <style scoped lang="scss">    
-    .burger {
-        display: none;
+    nav.main-menu {
+        @apply flex overflow-hidden absolute w-full items-center justify-between; 
+        @apply h-28 p-6 z-10;
+        // @apply bg-gradient-to-b from-black;
     }
 
-    .burger {
-        cursor: pointer;
+    nav.mobile-menu {
+        @apply flex overflow-hidden w-full items-center justify-between; 
+        @apply h-40 p-6 z-10;
     }
 
-    .burger div {             
-        width: 25px;
-        height: 3px;
-        background-color: rgb(226, 226, 226);
-        margin: 5px;        
-
-        transition: all 0.3s ease-in;
+    nav.main-menu {
+      background: linear-gradient(180deg,rgba(0,0,0,.65) 0,transparent);  
     }
 
-    nav {        
-        display: flex;                
-        min-height: var(--header-height);
-        align-items: center;
-        color: white;       
-        
-        position: absolute;
-        top: 0;
-        left:0;
-        right:0;
-        z-index: 2;
-
-        background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-
-        // box-shadow: 0px 2px 5px 2px rgba(0,0,0,0.5);
-
-        .logo {
-            margin-right: auto;
-            padding: .5em;
-            margin-top:1.5em;
+    .logo {
+        img {
+            @apply w-52;
+        }
+    }
 
 
-            a {
-                color: white;
-            }
+    .menus {
+        @apply hidden md:block;
+
+        li {
+            @apply relative inline p-2 list-none;
             
-            img {
-                margin-left: 1em;
-                width: 250px;
+            a {
+                @apply text-white text-sm md:text-lg lg:text-2xl font-bold;
             }
-        }        
-    }
-
-    .nav-links {        
-        display: flex;        
-        margin-right: 1em;        
-    }
-
-    .nav-links li {       
-        margin: 1em; 
-        list-style: none;
-    }
-
-    .nav-links a {
-        color: rgb(226,226,226);
-        text-decoration: none;
-        letter-spacing: 3px;
-        font-weight: bold; 
-        position: relative;   
-
-        &::after {
-            content: "";
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            height: $border-width;
-            width: 100%;
-            background-color: $accent-color;
-            transform: scaleX(0);            
-            transition: all 200ms linear 0s;
-        }
-
-        &:hover::after {
-            opacity: 1;    
-            transform: scaleX(1);
         }
     }
 
-    .burgerToggle {
-        .line1 {
-            transform: rotate(-45deg) translate(-5px,6px);
-        }
+    .mobile-links {
+        @apply text-white;
+    }
 
-        .line2 {
-            opacity: 0;
-        }
-        .line3 {
-            transform: rotate(45deg) translate(-5px,-6px);
+    .mobile-menu-button {
+        @apply sm:block md:hidden text-white -mt-4;
+
+        svg {
+            @apply h-8 w-8;
+
         }
     }
 
 
-    @media screen and (max-width: 768px) {
-        
-        :root {
-            --header-height: 25vh;
-        }
-        
 
-        body {
-            overflow-x: hidden;
-        }
+    .mobile-nav-wrapper {
+        @apply top-0 left-0 w-80 fixed h-full z-10;
+        @apply transition-all ease-in-out duration-300;        
+        background-color: rgb(0,0,0);
 
         .logo {
-            width: 200px;    
-            margin-top: 0 !important;        
+            @apply flex items-center;
         }
 
-        .nav-links {
-            display: none;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            height: 100vh;
-            width: 100vw;
-            background-color: var(--clr-secondary);                                    
-            opacity: 0;
-            transition: all 0.3s ease-in;
+        .mobile-menu-button {
+            @apply absolute p-2 rounded;
+            top: 50%;
+            right: -30px;
+            opacity: .5;
+            background: rgb(0,0,0);
+            transform: translateY(-50%);
 
-            li {
-                opacity: 0;
+            svg {
+                @apply h-6 w-6;
             }
-        }    
+        }
 
-        .burger { 
-            align-content: top;
-            margin-right: 1em;
-            margin-top: -1em;
-            display: block;
+        .mobile-links {
+            li {
+                @apply block p-4 pl-8;
+            }
         }
     }
-    
-    .nav-active {
-        display: block;
-        opacity: 1;
-        transform: translateX(0%);
-    }     
 
 </style>

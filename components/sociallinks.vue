@@ -24,6 +24,9 @@ export default {
     .social-links {
         a {
             color: white;
+            svg {
+                @apply h-8 w-8;                
+            }
         }
     }
 </style>

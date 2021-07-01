@@ -1,11 +1,11 @@
 <template>
-    <div class="spotlight-container">                
-        <div class="page-max">      
-            <h2 class="heading">{{ block.heading }}</h2>      
-            <div class="grid">
+    <div class="spotlight-container rb-container">                
+        <div class="page-max mx-auto">      
+            <h2 class="main-heading">{{ block.heading }}</h2>      
+            <div class="grid sm:grid-cols-1 lg:grid-cols-3 gap-4">
                 <div class="spotlight" v-for="spotlight in block.spotlight" :key="spotlight.title">                
                     <img :src="spotlight.image" />
-                    <h4>{{ spotlight.title }}</h4>
+                    <h4 class="sm:text-2xl mb-4 mt-2">{{ spotlight.title }}</h4>
                     <p class="text">{{ spotlight.text }}</p>
                 </div>    
             </div>
@@ -26,27 +26,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1em;        
-    }
 
-    .spotlight-container {
-        background-color: #e4e4e4;           
-    }
-
-    .spotlight {                
-        color: black;
-   
-        img {
-            margin: 1em 0;
-        }
-
-        h4 {
-            font-size: 1.2rem;
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-        }
-    }
 </style>

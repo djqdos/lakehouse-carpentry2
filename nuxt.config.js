@@ -5,9 +5,9 @@ export default {
   mode: 'universal',
   target: 'static',
 
-  // server: {
-  //   host: '192.168.1.3'
-  // },
+  server: {
+    host: '192.168.1.3'
+  },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -50,7 +50,8 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    ['nuxt-animejs']
+    'nuxt-animejs', 
+    '@nuxtjs/tailwindcss'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

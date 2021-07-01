@@ -1,209 +1,59 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 :root {
-  --ff-body:'Poppins', sans-serif;
-  --clr-background: #FFFFFF;
-  --clr-primary: red;
+  --accent-color: #d7953e;
   --clr-secondary: black;
-  --header-bg: #5D4954;
-  --header-height: 70px;
-  --footer-height: 8vh;
-  --max-width: 90%;
-  font-size: 22px;
 }
 
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@layer utilities {
+  .border-accent-bottom {
+    border-bottom-color: var(--accent-color);
+  }
+  .main-heading {
+    @apply relative pb-1.5 mb-8 text-2xl;
+  }
+  .main-heading::after {
+    @apply absolute bg-accent -bottom-2 left-0 h-1.5;
+    content: '';
+    width: 50px;
+  }
+  .cms-header h1, .cms-header h2, .cms-header h3, .cms-header h4, .cms-header h5, .cms-header h6 {
+    @apply text-2xl mb-4 mt-4;
+  }
 }
 
-img {
-  display: block;
-  max-width: 100%;
-}
-
-ul, ol {
-  list-style-position: inside;
-}
-
-body {
-  background: var(--clr-background);
-  font-family: 'Open Sans', sans-serif;
-  overflow-x: hidden;
-  color: black;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Open Sans", sans-serif;
-  letter-spacing: 1px;
-}
-
-h1 {
-  font-size: 1.5rem;
-}
-
-h2 {
-  font-size: 1.4rem;
-  margin-bottom: 0.9em;
-}
-
-h3 {
-  font-size: 1.3rem;
-}
-
-h4 {
-  font-size: 1.2rem;
-}
-
-h5 {
-  font-size: 1.1rem;
-}
-
-h6 {
-  font-size: 1rem;
-}
-
-p, li {
-  line-height: 1.5rem;
+@layer components {
+  .rb-container {
+    @apply mx-auto bg-gray-100;
+  }
+  .page-max {
+    @apply mx-auto w-auto;
+    @apply pt-6 pb-6 pl-4 pr-4;
+    @apply md:mx-auto md:w-4/5;
+    @apply lg:pt-16 lg:pb-16;
+  }
 }
 
 p {
-  margin-bottom: 1em;
+  @apply pb-2;
 }
 
-.container {
-  height: 100vh;
+.splitright-container + .splitleft-container .page-max {
+  @apply pt-0;
 }
 
-main {
-  grid-area: main;
-  min-height: 100vh;
+.splitright-container + .splitright-container .page-max {
+  @apply pt-0;
 }
 
-section.main {
-  padding-top: calc(var(--header-height) + 3vh);
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-bottom: 1em;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-color: black;
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
+.splitleft-container + .splitleft-container .page-max {
+  @apply pt-0;
 }
 
-.page-max {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 4em 0;
-}
-
-.hero {
-  color: white;
-}
-
-.hero h1 {
-  opacity: 0;
-  font-size: 4.5vmax;
-  text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.4);
-}
-
-.hero h2 {
-  opacity: 0;
-  font-size: 3vmax;
-  letter-spacing: -1px;
-  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
-}
-
-.hero img {
-  opacity: 0;
-}
-
-.heading {
-  font-size: 1.5rem;
-  position: relative;
-  padding-bottom: .3em;
-  margin-bottom: 2rem;
-}
-
-.heading::after {
-  position: absolute;
-  content: "";
-  height: 5px;
-  width: 50px;
-  background-color: #d7953e;
-  bottom: 0;
-  left: 0;
-}
-
-.mobilemenu-enter-active,
-.mobilemenu-leave-active {
-  transform: translateX(0%);
-  transition: transform 0.5s;
-}
-
-.mobilemenu-enter,
-.mobilemenu-leave-to {
-  transform: translateX(100%);
-}
-
-.vm--overlay {
-  background-color: rgba(0, 0, 0, 0.75) !important;
-}
-
-.service-content h1 {
-  font-size: 1.5rem;
-  position: relative;
-  padding-bottom: .3em;
-  margin-bottom: 2rem;
-}
-
-.service-content h1::after {
-  position: absolute;
-  content: "";
-  height: 5px;
-  width: 50px;
-  background-color: #d7953e;
-  bottom: 0;
-  left: 0;
-}
-
-@media screen and (max-width: 768px) {
-  :root {
-    --max-width: 90vw;
-    margin: 0;
-  }
-  body {
-    font-size: .9em;
-  }
-  .spotlight-container {
-    grid-template-columns: repeat(1, 1fr) !important;
-  }
-  .main {
-    display: grid;
-    place-items: center;
-  }
-  .hero h1 {
-    font-size: 8vmax;
-    margin-top: -2em;
-  }
-  .hero h2 {
-    font-size: 5vmax;
-  }
-  footer .page-max {
-    grid-template-columns: 1fr !important;
-  }
-  footer .page-max .social-links {
-    font-size: 1.5em;
-  }
-  footer .page-max .copyright {
-    order: 10;
-    font-size: 70%;
-  }
+.splitleft-container + .splitright-container .page-max {
+  @apply pt-0;
 }
 /*# sourceMappingURL=style.css.map */

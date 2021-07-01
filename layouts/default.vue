@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="w-full overflow-x-hidden">
     <mobilenavigation v-show="showMobileMenu" @closeMobileMenu="showMobileMenu = false" />
     <Navigation @showMobileMenu="showMobileMenu = true" />
       <Nuxt />
