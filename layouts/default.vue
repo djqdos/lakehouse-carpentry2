@@ -1,7 +1,6 @@
 <template>
   <div class="w-full overflow-x-hidden">
-    <mobilenavigation v-show="showMobileMenu" @closeMobileMenu="showMobileMenu = false" />
-    <Navigation @showMobileMenu="showMobileMenu = true" />
+    <Navigation />
       <Nuxt />
     <Footer />
   </div>

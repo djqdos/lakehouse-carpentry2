@@ -42,7 +42,7 @@ export default {
     { src: '@/plugins/global-components.js'},     
     { src: '@/plugins/vue-intersection.js'},
     { src: '@/plugins/vue-modal.js'},
-    { src: '@/plugins/vee-validate.js'}
+    { src: '@/plugins/vee-validate.js'},    
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -75,7 +75,8 @@ export default {
     }] ,
     '@nuxtjs/markdownit',
     '@nuxtjs/sitemap',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    'nuxt-leaflet'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -86,7 +87,7 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    transpile: ['vee-validate/dist/rules']
+    transpile: ['vee-validate/dist/rules'],
   },
 
   markdownit: {

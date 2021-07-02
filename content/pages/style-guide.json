@@ -136,7 +136,13 @@
         }
       ],
       "heading": "Services"
-    }                
+    },
+    {
+      "type": "maps",
+      "heading": "Where we are",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent maximus consectetur dolor eget vestibulum. Ut pharetra neque ut suscipit pellentesque. Ut placerat vitae arcu non lacinia. Donec varius in arcu vitae blandit. Donec purus nulla, pretium vitae ultrices at, imperdiet quis nunc. Integer porta risus at mi sodales ornare. \n\nCurabitur sodales porta malesuada. Nullam ultrices, dolor at fermentum scelerisque, lectus sem congue nibh, vitae tempus tellus odio at erat",
+      "map": "{\"type\":\"Point\",\"coordinates\":[-1.4324936,52.2149324]}"
+    }
   ],
   "hero": {
     "title": "Style Guide",

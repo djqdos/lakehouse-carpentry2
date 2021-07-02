@@ -6,7 +6,7 @@
             </nuxt-link>
         </div>
 
-        <ul class="menus">
+        <ul class="menus" v-if="pages && staticpages">
             <li v-for="page in pages" :key="page.slug">
                 <nuxt-link :to="page.slug">{{ page.title }}</nuxt-link>
             </li>
@@ -30,7 +30,7 @@
                     </nuxt-link>
                 </div>               
             </nav>
-            <ul class="mobile-links">
+            <ul class="mobile-links" v-if="pages && staticpages">
                 <li v-for="page in pages" :key="page.slug">
                     <nuxt-link :to="page.slug" class="hover" @click.native="navSlide">{{ page.title }}</nuxt-link>
                 </li>
@@ -69,15 +69,12 @@ export default {
     },
 
     mounted() {        
-
-        const navLinks = document.querySelectorAll(".nav-links li");
+        
     },
 
     methods: {
         navSlide(e) {            
-            const mobileMenu = document.querySelector(".mobile-nav-wrapper");
-            console.log("sdfhjskdfsd");
-            console.log("mobile nav = ", mobileMenu);
+            const mobileMenu = document.querySelector(".mobile-nav-wrapper");                        
             mobileMenu.classList.toggle("-translate-x-full");
         }
     }

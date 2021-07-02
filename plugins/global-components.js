@@ -12,6 +12,7 @@ import fixedbackground from '../components/pagecomponents/fixedbackground.vue'
 import sociallinks from '../components/sociallinks.vue'
 import testimonials from '../components/pagecomponents/testimonials.vue'
 import servicelist from '../components/pagecomponents/servicelist.vue'
+import maps from '../components/pagecomponents/maps.vue'
 
 const components = {
     hero,
@@ -25,6 +26,7 @@ const components = {
     testimonials,
     servicelist,
     sociallinks,
+    maps
 }
 
 Object.entries(components).forEach(([name, component]) => {

@@ -19,12 +19,8 @@ export default {
         let content = await $content("pages", params.slug)
         .fetch();
 
-        let settings = await $content("global")
-        .fetch();
-
         return {
-            content,
-            settings
+            content            
         }
     },
 
