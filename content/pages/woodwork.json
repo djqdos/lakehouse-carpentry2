@@ -26,5 +26,6 @@
       "twitterimage": "/img/1.png",
       "twitterimagealt": "ImageAlt"
     }
-  }  
+  },
+  "showinnav": false
 }

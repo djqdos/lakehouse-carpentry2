@@ -56,4 +56,9 @@ p {
 .splitleft-container + .splitright-container .page-max {
   @apply pt-0;
 }
+
+.service-content section .page-max {
+  @apply md:mx-auto md:w-full;
+  @apply p-0 pt-2 pb-2;
+}
 /*# sourceMappingURL=style.css.map */

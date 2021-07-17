@@ -1,7 +1,7 @@
 <template>
-    <div class="spotlight-container rb-container">                
-        <div class="page-max mx-auto">      
-            <h2 class="main-heading">{{ block.heading }}</h2>      
+    <section class="spotlight-container rb-container">                
+        <div class="page-max">      
+            <h2 class="main-heading" v-if="block.heading">{{ block.heading }}</h2>      
             <div class="grid sm:grid-cols-1 lg:grid-cols-3 gap-4">
                 <div class="spotlight" v-for="spotlight in block.spotlight" :key="spotlight.title">                
                     <img :src="spotlight.image" />
@@ -10,14 +10,12 @@
                 </div>    
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>
-//import { intersectionMixin } from '~/mixins/intersectionObserver.js'
 
-export default {
-    //mixins: [intersectionMixin],
+export default {    
     name: "spotlight",
     props: {
         block: Object

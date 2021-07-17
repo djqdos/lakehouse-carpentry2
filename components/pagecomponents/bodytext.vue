@@ -1,7 +1,9 @@
 <template>
-    <div class="page-max">
-        <div class="body-text" v-html="$md.render(block.bodytext)"></div>
-    </div>
+    <section class="bodytext-container">
+        <div class="page-max">
+            <div class="body-text" v-html="$md.render(block.bodytext)"></div>
+        </div>
+    </section>
 </template>
 
 <script>

@@ -3,11 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Content Manager</title>
+  <!-- Include the stylesheets from your site here -->
+
 </head>
 <body>
-  <!-- Include the script that builds the page and powers Netlify CMS -->
-  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>  
-
+  <script>
+    // Disable CMS auto initialization - this allows the configuration file to
+    // be augmented by script.
+    window.CMS_MANUAL_INIT = true;
+  </script>
+  
+  <script src="https://unpkg.com/netlify-cms@^2.10.1/dist/netlify-cms.js"></script>
+  <script src="config.js" type="module"></script>
+  <script>
+    //CMS.registerPreviewStyle('/scss/cms.css');
+  </script>
 </body>
 </html>

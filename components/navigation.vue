@@ -60,12 +60,17 @@ export default {
 
     async fetch() {
         this.pages = await this.$content("pages")
-        .where({ showonsite : { $eq : true } })
+        //.where({ showonsite : { $eq : true } })
         .fetch();      
         
         this.staticpages = await this.$content("contact")
-        .where({ showonsite : { $eq : true } })
-        .fetch();              
+        //.where({ showonsite : { $eq : true } })
+        .fetch();       
+
+
+        const temp = await this.$content("pages")
+        .only(['title', 'slug', 'showonsite', 'showinnav'])
+        .fetch();
     },
 
     mounted() {        

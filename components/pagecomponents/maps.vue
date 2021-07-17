@@ -3,7 +3,7 @@
         <div class="page-max">
             <h2 class="main-heading" v-if="block.heading">{{ block.heading }}</h2>
             <div class="mapsGrid">
-                <div ref="map-root" class="map">
+                <div ref="map-root" class="map" v-if="block.maps">
                     <client-only>
                     <l-map :zoom=13 :center="[block.maps.coordinates[1], block.maps.coordinates[0]]">
                          <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></l-tile-layer>

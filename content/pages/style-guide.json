@@ -25,9 +25,6 @@
       "heading": "What we do"
     },
     {
-      "type": "slider"
-    },
-    {
       "type": "splitleft",
       "text": "## Heading 1\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra nunc metus, et laoreet risus efficitur sed. Cras venenatis risus non lorem ultrices maximus. Maecenas eget maximus magna. Quisque laoreet eu augue at faucibus. Quisque sit amet tempor mi. Aenean nec nisi non nisi ullamcorper scelerisque sit amet eget lacus. Aliquam ullamcorper tortor sit amet ante dignissim, nec finibus urna faucibus. Praesent rhoncus volutpat eros. Vivamus placerat magna diam, ac convallis elit venenatis non.",
       "image": "/img/nev2.png"
@@ -116,26 +113,31 @@
       "servicelist": [
         {
           "servicename": "Corian",
-          "text": "# Corian\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. In non vehicula mi, ut molestie velit. Ut dictum sed leo eu molestie. In sed laoreet orci, ut tempus purus. In eget arcu at urna vulputate euismod. Integer eu aliquam ex. Duis ultrices leo vel ante accumsan, eu malesuada nunc tempor. Nam id nibh justo. Proin tristique pretium dolor. Pellentesque vitae malesuada odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus sed metus sit amet ex tincidunt tempus id vel odio.\n\nSuspendisse tincidunt justo nec lacinia facilisis. Duis arcu enim, venenatis vitae odio id, ullamcorper lacinia quam. Sed id sem interdum, mollis tellus vel, fringilla tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi tempus consequat magna, vitae imperdiet nisi. Ut eleifend euismod neque, eget faucibus risus tempor sed. Aliquam tempus mi eget ante rutrum pharetra. Nunc ac neque at nisi scelerisque lacinia id et leo.\n\nMaecenas vel sapien ipsum. Quisque nec velit id urna mollis sollicitudin vel at felis. Suspendisse sed lectus nec elit vulputate pretium. Suspendisse eu lobortis diam, ut cursus orci. Sed id libero vitae elit auctor ultricies. Suspendisse at dui sapien. Vivamus eget justo sit amet magna elementum interdum ac a sapien."
+          "text": "# Corian\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. In non vehicula mi, ut molestie velit. Ut dictum sed leo eu molestie. In sed laoreet orci, ut tempus purus. In eget arcu at urna vulputate euismod. Integer eu aliquam ex. Duis ultrices leo vel ante accumsan, eu malesuada nunc tempor. Nam id nibh justo. Proin tristique pretium dolor. Pellentesque vitae malesuada odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus sed metus sit amet ex tincidunt tempus id vel odio.\n\nSuspendisse tincidunt justo nec lacinia facilisis. Duis arcu enim, venenatis vitae odio id, ullamcorper lacinia quam. Sed id sem interdum, mollis tellus vel, fringilla tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi tempus consequat magna, vitae imperdiet nisi. Ut eleifend euismod neque, eget faucibus risus tempor sed. Aliquam tempus mi eget ante rutrum pharetra. Nunc ac neque at nisi scelerisque lacinia id et leo.\n\nMaecenas vel sapien ipsum. Quisque nec velit id urna mollis sollicitudin vel at felis. Suspendisse sed lectus nec elit vulputate pretium. Suspendisse eu lobortis diam, ut cursus orci. Sed id libero vitae elit auctor ultricies. Suspendisse at dui sapien. Vivamus eget justo sit amet magna elementum interdum ac a sapien.",
+          "sections": [
+            {
+              "type": "bodytext",
+              "bodytext": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in dui sodales, vehicula diam ac, placerat nunc. Etiam at facilisis nisl. Sed imperdiet condimentum pulvinar. Nunc id elit non nisi iaculis porta at at massa. Donec ut magna quis purus vehicula congue vel ut metus. Maecenas posuere luctus luctus. Nulla sit amet turpis dolor. Vestibulum pretium non justo vitae mattis. Integer turpis neque, feugiat non varius et, bibendum quis quam. Mauris in rhoncus lacus. Duis dignissim ante luctus vestibulum fermentum. Fusce nec nunc ullamcorper ipsum luctus porta sed ut velit. Nam ornare justo eu elit finibus varius. Praesent elementum ultrices mauris, sed tempus mauris dictum nec. Quisque nec augue consequat, dapibus nunc ut, feugiat ex.\n\nMauris lacinia tristique vestibulum. Nullam ut neque vel magna euismod aliquam quis quis quam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed fringilla ipsum a ante molestie scelerisque. Pellentesque sit amet arcu dolor. Sed iaculis, nibh ut sollicitudin imperdiet, nunc augue bibendum sem, a sollicitudin mi ante vel risus. Maecenas pulvinar aliquet elementum. Proin bibendum non nisl ac mattis. Cras sit amet libero ultrices justo ultrices ullamcorper in id mi. Quisque eget tellus et neque varius tempor id et nibh. Fusce elementum tempus justo, tincidunt condimentum augue sodales ut."
+            },
+            {
+              "type": "splitleft",
+              "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in dui sodales, vehicula diam ac, placerat nunc. Etiam at facilisis nisl. Sed imperdiet condimentum pulvinar. Nunc id elit non nisi iaculis porta at at massa. Donec ut magna quis purus vehicula congue vel ut metus. Maecenas posuere luctus luctus. Nulla sit amet turpis dolor. Vestibulum pretium non justo vitae mattis. Integer turpis neque, feugiat non varius et, bibendum quis quam. Mauris in rhoncus lacus. Duis dignissim ante luctus vestibulum fermentum. Fusce nec nunc ullamcorper ipsum luctus porta sed ut velit. Nam ornare justo eu elit finibus varius. Praesent elementum ultrices mauris, sed tempus mauris dictum nec. Quisque nec augue consequat, dapibus nunc ut, feugiat ex.",
+              "image": "/img/2.png"
+            }
+          ]
         },
         {
           "servicename": "Woodwork",
-          "text": "# Woodwork\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. In non vehicula mi, ut molestie velit. Ut dictum sed leo eu molestie. In sed laoreet orci, ut tempus purus. In eget arcu at urna vulputate euismod. Integer eu aliquam ex. Duis ultrices leo vel ante accumsan, eu malesuada nunc tempor. Nam id nibh justo. Proin tristique pretium dolor. Pellentesque vitae malesuada odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus sed metus sit amet ex tincidunt tempus id vel odio.\n\nSuspendisse tincidunt justo nec lacinia facilisis. Duis arcu enim, venenatis vitae odio id, ullamcorper lacinia quam. Sed id sem interdum, mollis tellus vel, fringilla tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi tempus consequat magna, vitae imperdiet nisi. Ut eleifend euismod neque, eget faucibus risus tempor sed. Aliquam tempus mi eget ante rutrum pharetra. Nunc ac neque at nisi scelerisque lacinia id et leo.\n\nMaecenas vel sapien ipsum. Quisque nec velit id urna mollis sollicitudin vel at felis. Suspendisse sed lectus nec elit vulputate pretium. Suspendisse eu lobortis diam, ut cursus orci. Sed id libero vitae elit auctor ultricies. Suspendisse at dui sapien. Vivamus eget justo sit amet magna elementum interdum ac a sapien."
-        },
-        {
-          "servicename": "Something Else",
-          "text": "# Woodwork\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. In non vehicula mi, ut molestie velit. Ut dictum sed leo eu molestie. In sed laoreet orci, ut tempus purus. In eget arcu at urna vulputate euismod. Integer eu aliquam ex. Duis ultrices leo vel ante accumsan, eu malesuada nunc tempor. Nam id nibh justo. Proin tristique pretium dolor. Pellentesque vitae malesuada odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus sed metus sit amet ex tincidunt tempus id vel odio.\n\nSuspendisse tincidunt justo nec lacinia facilisis. Duis arcu enim, venenatis vitae odio id, ullamcorper lacinia quam. Sed id sem interdum, mollis tellus vel, fringilla tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi tempus consequat magna, vitae imperdiet nisi. Ut eleifend euismod neque, eget faucibus risus tempor sed. Aliquam tempus mi eget ante rutrum pharetra. Nunc ac neque at nisi scelerisque lacinia id et leo.\n\nMaecenas vel sapien ipsum. Quisque nec velit id urna mollis sollicitudin vel at felis. Suspendisse sed lectus nec elit vulputate pretium. Suspendisse eu lobortis diam, ut cursus orci. Sed id libero vitae elit auctor ultricies. Suspendisse at dui sapien. Vivamus eget justo sit amet magna elementum interdum ac a sapien."
-        },
-        {
-          "servicename": "Another Item",
-          "text": "# Woodwork\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. In non vehicula mi, ut molestie velit. Ut dictum sed leo eu molestie. In sed laoreet orci, ut tempus purus. In eget arcu at urna vulputate euismod. Integer eu aliquam ex. Duis ultrices leo vel ante accumsan, eu malesuada nunc tempor. Nam id nibh justo. Proin tristique pretium dolor. Pellentesque vitae malesuada odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus sed metus sit amet ex tincidunt tempus id vel odio.\n\nSuspendisse tincidunt justo nec lacinia facilisis. Duis arcu enim, venenatis vitae odio id, ullamcorper lacinia quam. Sed id sem interdum, mollis tellus vel, fringilla tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi tempus consequat magna, vitae imperdiet nisi. Ut eleifend euismod neque, eget faucibus risus tempor sed. Aliquam tempus mi eget ante rutrum pharetra. Nunc ac neque at nisi scelerisque lacinia id et leo.\n\nMaecenas vel sapien ipsum. Quisque nec velit id urna mollis sollicitudin vel at felis. Suspendisse sed lectus nec elit vulputate pretium. Suspendisse eu lobortis diam, ut cursus orci. Sed id libero vitae elit auctor ultricies. Suspendisse at dui sapien. Vivamus eget justo sit amet magna elementum interdum ac a sapien."
-        },
-        {
-          "servicename": "Yet Another",
-          "text": "# Woodwork\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. In non vehicula mi, ut molestie velit. Ut dictum sed leo eu molestie. In sed laoreet orci, ut tempus purus. In eget arcu at urna vulputate euismod. Integer eu aliquam ex. Duis ultrices leo vel ante accumsan, eu malesuada nunc tempor. Nam id nibh justo. Proin tristique pretium dolor. Pellentesque vitae malesuada odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus sed metus sit amet ex tincidunt tempus id vel odio.\n\n![](/img/2.png)\n\nSuspendisse tincidunt justo nec lacinia facilisis. Duis arcu enim, venenatis vitae odio id, ullamcorper lacinia quam. Sed id sem interdum, mollis tellus vel, fringilla tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi tempus consequat magna, vitae imperdiet nisi. Ut eleifend euismod neque, eget faucibus risus tempor sed. Aliquam tempus mi eget ante rutrum pharetra. Nunc ac neque at nisi scelerisque lacinia id et leo.\n\nMaecenas vel sapien ipsum. Quisque nec velit id urna mollis sollicitudin vel at felis. Suspendisse sed lectus nec elit vulputate pretium. Suspendisse eu lobortis diam, ut cursus orci. Sed id libero vitae elit auctor ultricies. Suspendisse at dui sapien. Vivamus eget justo sit amet magna elementum interdum ac a sapien."
+          "sections": [
+            {
+              "type": "bodytext",
+              "bodytext": "Pellentesque interdum nunc id ipsum imperdiet, ac pulvinar nisl volutpat. Morbi pulvinar neque eu elit ultricies aliquet. Donec rutrum lorem eu quam imperdiet cursus. Donec enim nisl, elementum vel placerat quis, commodo eget elit. Pellentesque consequat finibus ligula, ut commodo velit ornare in. Praesent sagittis vitae elit et rutrum. Donec ut maximus est. Aliquam elementum tristique placerat. Mauris gravida porttitor euismod. Sed ullamcorper, eros eu laoreet vestibulum, magna dui bibendum nisl, eget viverra ante lacus nec est.\n\n![woodwork](/img/1.png \"woodwork\")"
+            }
+          ]
         }
       ],
-      "heading": "Services"
+      "heading": "Services",
+      "liststyle": "service-list-top"
     },
     {
       "type": "maps",
@@ -153,5 +155,6 @@
     "seo": {
       "title": ""
     }
-  }
+  },
+  "showinnav": true
 }
